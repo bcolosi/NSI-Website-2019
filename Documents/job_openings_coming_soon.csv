@@ -1,0 +1,136 @@
+Location,State,Title,Unit
+Phoenix Area,AZ,Staff RN,ER
+Phoenix Area,AZ,Staff RN,ICU
+Phoenix Area,AZ,Staff RN,IMCU
+Phoenix Area,AZ,Staff RN,Med/Surg
+Phoenix Area,AZ,Staff RN,OR
+Phoenix Area,AZ,Staff RN,PACU
+Phoenix Area,AZ,Staff RN,PCU
+Northern,CA,Staff RN,ER
+Northern,CA,Staff RN,ICU
+Northern,CA,Staff RN,Med/Surg
+Northern,CA,Staff RN,OR
+Northern,CA,Staff RN,PACU
+Northern,CA,Staff RN,PCU
+Northern,CA,Staff RN,Tele
+Southern,CA,Staff RN,ER
+Southern,CA,Staff RN,ICU
+Southern,CA,Staff RN,Med/Surg
+Southern,CA,Staff RN,Neuro PCU
+Southern,CA,Staff RN,Onc
+Southern,CA,Staff RN,OR
+Southern,CA,Staff RN,PCU
+DC,DC,Staff RN,ER
+DC,DC,Staff RN,ICU
+DC,DC,Staff RN,Med/Surg
+DC,DC,Staff RN,Onc
+DC,DC,Staff RN,OR
+DC,DC,Staff RN,Ortho
+DC,DC,Staff RN,PACU
+DC,DC,Staff RN,PCU
+DC,DC,Staff RN,Tele
+Atlantic Coast,FL,Staff RN,ER
+Atlantic Coast,FL,Staff RN,ICU
+Atlantic Coast,FL,Staff RN,Med/Surg
+Atlantic Coast,FL,Staff RN,OR
+Atlantic Coast,FL,Staff RN,PCU
+Atlantic Coast,FL,Staff RN,Tele
+Central,FL,Staff RN,Dialysis
+Central,FL,Staff RN,ER
+Central,FL,Staff RN,ICU
+Central,FL,Staff RN,Med/Surg
+Central,FL,Staff RN,OR
+Central,FL,Staff RN,PACU
+Central,FL,Staff RN,PCU
+Central,FL,Staff RN,Tele
+Central,IN,Staff RN,ER
+Central,IN,Staff RN,ICU
+Central,IN,Staff RN,Med/Surg
+Central,IN,Staff RN,OR
+Central,IN,Staff RN,PACU
+Central,IN,Staff RN,PCU
+Central,IN,Staff RN,Tele
+Central,KS,Staff RN,Med/Surg
+Central,KS,Staff RN,OR
+Central,KS,Staff RN,Tele
+Boston Area,MA,Staff RN,ER
+Boston Area,MA,Staff RN,ICU
+Boston Area,MA,Staff RN,Med/Surg
+Boston Area,MA,Staff RN,OR
+Boston Area,MA,Staff RN,PACU
+Boston Area,MA,Staff RN,PCU
+Boston Area,MA,Staff RN,Tele
+Detroit Area,MI,Staff RN,ER
+Detroit Area,MI,Staff RN,ICU
+Detroit Area,MI,Staff RN,Med/Surg
+Detroit Area,MI,Staff RN,OR
+Detroit Area,MI,Staff RN,PCU
+Detroit Area,MI,Staff RN,Tele
+Central,MT,Staff RN,ICU
+Central,MT,Staff RN,OR
+Central,MT,Staff RN,PACU
+Central,NC,Staff RN,ER
+Central,NC,Staff RN,ICU
+Central,NC,Staff RN,Med/Surg
+Central,NC,Staff RN,PCU
+Central,NC,Staff RN,Tele
+Central,NJ,Staff RN,ER
+Central,NJ,Staff RN,ICU
+Central,NJ,Staff RN,Med/Surg
+Central,NJ,Staff RN,OR
+Central,NJ,Staff RN,PCU
+Central,NJ,Staff RN,Tele
+Upstate,NY,Staff RN,ER
+Upstate,NY,Staff RN,ICU
+Upstate,NY,Staff RN,Med/Surg
+Upstate,NY,Staff RN,Onc
+Upstate,NY,Staff RN,OR
+Upstate,NY,Staff RN,Ortho
+Upstate,NY,Staff RN,PACU
+Upstate,NY,Staff RN,PCU
+Upstate,NY,Staff RN,Tele
+Western,NY,Staff RN,ER
+Western,NY,Staff RN,ICU
+Western,NY,Staff RN,Med/Surg
+Western,NY,Staff RN,OR
+Western,NY,Staff RN,PCU
+Western,NY,Staff RN,Tele
+Central,OH,Staff RN,Med/Surg
+Central,OH,Staff RN,OR
+Central,OH,Staff RN,Tele
+Western,OH,Staff RN,ER
+Western,OH,Staff RN,ICU
+Western,OH,Staff RN,Med/Surg
+Western,OH,Staff RN,OR
+Western,OH,Staff RN,PCU
+Western,OH,Staff RN,Tele
+Northern,PA,Staff RN,ER
+Northern,PA,Staff RN,ICU
+Northern,PA,Staff RN,Med/Surg
+Northern,PA,Staff RN,PCU
+Northern,PA,Staff RN,Tele
+Philadelphia,PA,Staff RN,ER
+Philadelphia,PA,Staff RN,ICU
+Philadelphia,PA,Staff RN,Med/Surg
+Philadelphia,PA,Staff RN,OR
+Philadelphia,PA,Staff RN,PCU
+Philadelphia,PA,Staff RN,Tele
+Eastern,TN,Staff RN,ER
+Eastern,TN,Staff RN,ICU
+Eastern,TN,Staff RN,Med/Surg
+Eastern,TN,Staff RN,OR
+Eastern,TN,Staff RN,PCU
+Eastern,TN,Staff RN,Tele
+Dallas Area,TX,Staff RN,Dialysis
+Dallas Area,TX,Staff RN,ER
+Dallas Area,TX,Staff RN,ICU
+Dallas Area,TX,Staff RN,Med/Surg
+Dallas Area,TX,Staff RN,OR
+Dallas Area,TX,Staff RN,PACU
+Dallas Area,TX,Staff RN,PCU
+Dallas Area,TX,Staff RN,Tele
+Houston,TX,Staff RN,Dialysis
+Houston,TX,Staff RN,Med/Surg
+Houston,TX,Staff RN,Onc
+Houston,TX,Staff RN,Ortho
+Houston,TX,Staff RN,Tele

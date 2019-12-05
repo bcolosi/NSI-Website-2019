@@ -1,0 +1,190 @@
+/*
+    Stylesheet only applied to Sales Presentation page
+*/
+
+#region-three {
+    padding: 30px 0;
+}
+
+.pwr-pt-bkgrd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/texture_2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.pwr-pt-container {
+    margin: 0 auto;
+    position: relative;
+    height: 725px;
+    width: 935px;
+}
+
+#pwr-pt-pres {
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pwr-pt-controls {
+    margin: 0 auto 10px;
+    position: relative;
+    width: 935px;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+.pwr-pt-controls .prev-slide,
+.pwr-pt-controls .next-slide {
+    padding: 7px;
+    width: 40px;
+    float: right;
+    cursor: pointer;
+    background-color: #1d5da7;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pwr-pt-controls .arrow {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    display: block;
+    cursor: pointer;
+    border-style: solid;
+}
+
+.pwr-pt-controls .prev-slide {
+    margin-right: 10px;
+}
+
+.pwr-pt-controls .prev-slide .arrow {
+    border-width: 7px 12px 7px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.pwr-pt-controls .next-slide .arrow {
+    border-width: 7px 0 7px 12px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.page_info {
+    font-size: 18px;
+}
+
+.slide-controls-overlay {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+.slide-controls-overlay.prev-slide {
+    left: 0;
+}
+
+.slide-controls-overlay.next-slide {
+    right: 0;
+}
+
+.btn-container {
+    margin: 20px auto 0;
+    width: 464px;
+}
+
+.link-btn {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.presentation-text {
+    margin: 0 auto;
+    width: 66%;
+}
+
+@media (max-width: 767px) {
+    .pwr-pt-container {
+        width: 90%;
+    }
+
+    .pwr-pt-controls {
+        width: 90%;
+    }
+
+    .btn-container {
+        width: 200px;
+    }
+
+    .link-btn {
+        margin: 0;
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pwr-pt-container {
+        width: 90%;
+    }
+
+    .pwr-pt-controls {
+        width: 90%;
+    }
+
+    .btn-container {
+        width: 200px;
+    }
+
+    .link-btn {
+        margin: 0;
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .overlay {
+        padding: 10px 15px!important;
+    }
+
+    .overlay h2,
+    .overlay p {
+        padding: 5px;
+    }
+
+    .overlay h2{
+        font-size: 38px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1384px){
+    .overlay {
+        padding: 10px 15px!important;
+    }
+
+    .overlay h2,
+    .overlay p {
+        padding: 5px;
+    }
+
+    .overlay h2{
+        font-size: 42px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+}

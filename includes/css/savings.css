@@ -1,0 +1,271 @@
+/*
+    Stylesheet only applied to savings calculator page
+*/
+
+.texture-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(230, 232, 230, 0.45), rgba(230, 232, 230, 0.45)), url(../images/texture_3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hallway-bkgrd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(49, 108, 175, 0.9), rgba(49, 108, 175, 0.9)), url(../images/hosp-hall-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.savings-header {
+    font-size: 48px!important;
+    font-style: italic;
+}
+
+#region-one #content-head {
+    margin-bottom: 0!important;
+}
+
+#region-three {
+    padding: 30px 0;
+}
+
+.savings-content-box {
+    padding: 30px 45px;
+    width: 95%;
+}
+
+.savings-box-left {
+    height: 417px;
+    position: relative;
+}
+
+.savings-box-right {
+    border-left: 2px solid #808080;
+}
+
+.savings-box-info {
+    margin-right: 15px;
+}
+
+.savings-box-info-header {
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #1d5da7;
+}
+
+.savings-box-info-paragraph {
+    margin: 0;
+}
+
+.savings-box-info-list {
+    margin: 10px 40px;
+    width: 270px;
+}
+
+.savings-box-info-list li {
+    padding: 5px 0;
+}
+
+.savings-box-info-list li {
+    list-style-position: inside;
+}
+
+.savings-box-info .link-btn {
+    position: absolute;
+    bottom: 0;
+}
+
+.savings-box-left .bottom-positioned {
+    position: absolute;
+    bottom: 0;
+    width: 92.563%;
+}
+
+.calculated-boxes-line td {
+    padding-top: 30px;
+    border-top: 2px solid #808080;
+}
+
+.last-form-element td {
+    padding-bottom: 30px;
+}
+
+.form-input.result {
+    font-weight: bold;
+    background-color: #ffffbe;
+    background-color: #f6ffe2;
+}
+
+input {
+    text-align: right;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-overlay-content {
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.field-info-container {
+    display: inline-block;
+    position: relative;
+    cursor: default;
+}
+
+.info-icon {
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #78b0dc;
+}
+
+.field-info {
+    padding: 10px;
+    width: 200px;
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-style: italic;
+    z-index: 5;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.field-info-active {
+    display: block!important;
+    top: -10px;
+    left: 25px;
+}
+
+@media (max-width: 767px) {
+    .savings-header {
+        font-size: 30px!important;
+    }
+    
+    .savings-content-box {
+        padding: 20px 15px;
+        width: 100%;
+    }
+    
+    .savings-box-left {
+        padding: 0 0 10px;
+        height: auto;
+    }
+    
+    .savings-box-right {
+        padding: 25px 0 0;
+        border-left: none;
+        border-top: 2px solid #808080;
+    }
+    
+    .savings-box-info {
+        margin-right: 0;
+        text-align: justify;
+    }
+    
+    .savings-box-info-header {
+        font-size: 34px;
+    }
+    
+    .savings-box-info-list {
+        margin: 10px 15px;
+    }
+    
+    .savings-box-left .bottom-positioned {
+        position: relative;
+        width: 100%;
+    }
+
+    .form-table td {
+        padding: 10px 5px;
+    }
+
+    .form-input-lable{
+        font-size: 14px;
+    }
+
+    .form-input {
+        width: 130px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .savings-header {
+        font-size: 38px!important;
+    }
+    
+    .savings-content-box {
+        padding: 20px 30px;
+        width: 100%;
+        max-width: 670px;
+    }
+    
+    .savings-box-left {
+        padding: 0 0 10px;
+        height: auto;
+    }
+    
+    .savings-box-right {
+        padding: 25px 0 0;
+        border-left: none;
+        border-top: 2px solid #808080;
+    }
+    
+    .savings-box-info {
+        margin-right: 0;
+        text-align: justify;
+    }
+    
+    .savings-box-info-header {
+        font-size: 38px;
+    }
+    
+    .savings-box-info-list {
+        margin: 10px 15px;
+    }
+    
+    .savings-box-left .bottom-positioned {
+        position: relative;
+        width: 100%;
+    }
+
+    .form-table td {
+        padding: 15px 5px;
+    }
+
+    .form-input-lable{
+        font-size: 18px;
+    }
+
+    .form-input {
+        width: 225px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .savings-box-left {
+        height: 498px;
+    }
+}

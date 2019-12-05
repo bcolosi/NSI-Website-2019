@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!--Default Head-->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+
+    <!--CSS Links-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="/includes/css/style.min.css">
+    <link rel="stylesheet" href="/includes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/includes/css/slicknav.css">
+    <link rel="stylesheet" href="/includes/css/font-awesome.min.css">
+
+    <!--JS/jQuery Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/includes/js/custom.min.js"></script>
+    <script src="/includes/js/bootstrap.min.js"></script>
+    <script src="/includes/js/jquery.slicknav.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#mobile-menu').slicknav({
+                label: '',
+                removeClasses: false
+            });
+            $('.slicknav_menu').formatMobileMenu();
+            $('.slicknav_menu .dropdown').collapseObj('click', 'dropdown-active');
+            $('.slicknav_btn').click(function(){
+                $('.slicknav_menu .dropdown').removeClass('dropdown-active');
+                $('.slicknav_menu .dropdown-content').height(0);
+            });
+            $('#main-menu .dropdown').collapseObj('mouseenter', '');
+            $('#main-menu .dropdown').collapseObj('mouseleave', '');
+        });
+    </script>
+
+    <!--File Specific Head-->
+</head>

@@ -1,0 +1,309 @@
+/*
+    Stylesheet only applied to Application page
+*/
+
+#region-one {
+    padding: 40px 0 30px 0;
+}
+
+.process-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(230, 232, 230, 0.5), rgba(230, 232, 230, 0.5)), url(../images/texture_2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.form-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(49, 108, 175, 0.85), rgba(49, 108, 175, 0.85)), url(../images/hosp-hall-home-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.process-mid-col {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.process-mid-col .process-info {
+    width: 500px;
+}
+
+.process-header {
+    margin: 0 auto 20px!important;
+    display: block;
+    padding: 20px 15px;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #1d5da7;
+    border-radius: 10px;
+}
+
+.nsi-process-list {
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
+    counter-reset: myCounter;
+}
+
+.nsi-process-list li {
+    padding: 4px 0 10px;
+    position: relative;
+    font-size: 18px;
+    counter-increment: myCounter;
+}
+
+.nsi-process-list li::before {
+    padding-left: 1px;
+    content: counter(myCounter);
+    position: absolute;
+    --size: 32px;
+    top: 0;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #1d5da7;
+    border-radius: 50%;
+}
+
+.arrow-container {
+    vertical-align: middle;
+}
+
+.next-arrow {
+    width: 70px;
+    position: relative;
+    top: 50%;
+}
+
+.next-arrow.left {
+    left: 0;
+}
+
+.next-arrow.right {
+    margin: 0 auto;
+}
+
+.next-arrow-head, 
+.next-arrow-body {
+    display: inline-block;
+}
+
+.next-arrow-head {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 30px 25px;
+    border-color: transparent transparent transparent #1d5da7;
+}
+
+.next-arrow-body {
+    height: 30px;
+    width: 45px;
+    float: left;
+    background-color: #1d5da7;
+    position: relative;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.app-content-box {
+    padding: 30px 45px;
+    width: 600px;
+    position: relative;
+}
+
+.application-header {
+    font-size: 44px!important;
+    text-decoration: underline;
+}
+
+#content-body h2 {
+    margin: 0 0 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.form-table {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.form-table td {
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.form-input {
+    margin: 0;
+    width: 235px;
+    float: right;
+}
+
+#content-bkgrd-quotes {
+    position: relative;
+}
+
+.quote-container {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.quote-box {
+    padding: 15px 18px;
+    height: auto;
+    width: auto;
+    max-width: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 4px 10px 10px 12px rgba(0,0,0,0.3);
+    -moz-box-shadow: 4px 10px 10px 12px rgba(0,0,0,0.3);
+    -ms-box-shadow: 4px 10px 10px 12px rgba(0,0,0,0.3);
+    -o-box-shadow: 4px 10px 10px 12px rgba(0,0,0,0.3);
+    box-shadow: 4px 10px 10px 12px rgba(0,0,0,0.3);
+}
+
+.quote-box .quotee {
+    margin: 0;
+    text-align: right;
+}
+
+.quote-tail-left,
+.quote-tail-right {
+    height: 0;
+    width: 0;
+    border-style: solid;
+}
+
+.quote-tail-left {
+    float: left;
+    border-width: 20px 20px 0 0;
+    border-color: #fff transparent transparent transparent;
+}
+
+.quote-tail-right {
+    float: right;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.quote {
+    font-size: 16px;
+    font-style: italic;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.quote::before,
+.quote::after {
+    content: '"';
+}
+
+.eeo-statement {
+    font-style: italic;
+}
+
+@media (max-width: 767px) {
+    #region-one {
+        padding: 40px 15px 30px;
+    }
+
+    .process-mid-col {
+        margin: 30px auto;
+    }
+
+    .app-content-box {
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .application-header {
+        font-size: 28px!important;
+        text-decoration: underline;
+    }
+    
+    .form-table {
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .form-table td {
+        margin: 0;
+        padding: 5px;
+        font-size: 14px;
+    }
+    
+    .form-input {
+        margin: 0;
+        width: 165px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #region-one {
+        padding: 40px 15px 30px;
+    }
+
+    .process-mid-col {
+        margin: 30px auto;
+    }
+
+    .app-content-box {
+        padding: 20px 15px;
+        max-width: 750;
+    }
+
+    .application-header {
+        font-size: 34px!important;
+        text-decoration: underline;
+    }
+    
+    .table-list-container th {
+        font-size: 22px!important;
+    }
+    
+    .table-list-container td {
+        font-size: 16px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1384px){
+    .next-arrow {
+        width: 56px;
+        margin-right: 15px;
+    }
+    
+    .next-arrow-head {
+        border-width: 24px 0 24px 20px;
+    }
+    
+    .next-arrow-body {
+        height: 24px;
+        width: 36px;
+    }
+}
+
+@media (max-width: 1360px) {
+    #content-bkgrd-quotes {
+        display: none;
+    }
+}
+
+@media (min-width: 1361px) and (max-width: 1549px) {
+    .quote-container {
+        max-width: 250px;
+    }
+}

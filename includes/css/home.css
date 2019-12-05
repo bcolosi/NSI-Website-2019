@@ -1,0 +1,190 @@
+/*
+    Stylesheet only applied to Home page
+*/
+
+.hallway-bkgrd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(49, 108, 175, 0.9), rgba(49, 108, 175, 0.9)), url(../images/hosp-hall-home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.region-one-bkgrd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(230, 232, 230, 0.9), rgba(230, 232, 230, 0.9)), url(../images/under-construction-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.texture-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/texture_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#region-one .content-box {
+    background-color: #316caf!important;
+}
+
+.content-list {
+    margin: 0;
+    padding: 15px!important;
+    overflow: hidden;
+}
+
+.content-list ul {
+    margin: 0 15px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    -ms-columns: 2;
+    -o-columns: 2;
+}
+
+.content-list li {
+    margin-left: 0px;
+    margin-bottom: 25px;
+    padding-left: 35px;
+    list-style: none;
+    background-image: url(/includes//images//icon/check.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.content-list-last {
+    margin-bottom: 0!important;
+}
+
+.content-list-text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.content-list-img {
+    padding: 0!important;
+    overflow: hidden;
+}
+
+.content-list-img img {
+    width: 100%;
+}
+
+.white-link-btn {
+    padding: 15px 0 0!important;
+    position: relative;
+}
+
+#region-two .content-box {
+    height: 500px!important;
+    width: 375px!important;
+}
+
+.services-header h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.who-we-are-img {
+    overflow: hidden;
+}
+
+.who-we-are-img img {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .content-list li {
+        margin-left: 0px;
+        margin-bottom: 15px;
+        padding-left: 25px;
+        background-size: 20px;
+    }
+
+    .content-list-text {
+        font-size: 15px;
+    }
+
+    #region-two .content-box {
+        height: auto!important;
+        width: 100%!important;
+        max-width: 300px;
+    }
+
+    .content-box .content-box-text {
+        padding: 5px 30px 0 30px;
+        min-height: 175px;
+        max-height: none;
+    }
+
+    .content-box .content-box-img {
+        height: unset;
+    }
+
+    .content-box .content-box-img img {
+        min-height: unset;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #region-two .content-box {
+        margin: 0;
+        width: 100%!important;
+    }
+
+    .content-box .content-box-text {
+        padding: 5px 30px 0 30px;
+        height: 192px;
+        max-height: none;
+    }
+
+    .content-box .content-box-img {
+        height: unset;
+    }
+
+    .content-box .content-box-img img {
+        min-height: unset;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .content-list li {
+        margin-bottom: 15px;
+        padding-left: 32px;
+        background-size: 22px;
+    }
+    
+    .content-list-text {
+        font-size: 16px;
+    }
+    
+    .services-header h2 {
+        font-size: 38px;
+    }
+
+    #region-two .content-box {
+        margin: 0;
+        height: unset!important;
+        width: 100%!important;
+    }
+
+    .content-box .content-box-text {
+        padding: 5px 20px 0;
+        height: 110px;
+        max-height: none;
+    }
+
+    .content-box .content-box-img {
+        height: unset;
+    }
+
+    .content-box .content-box-img img {
+        min-height: unset;
+    }
+}

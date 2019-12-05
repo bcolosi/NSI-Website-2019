@@ -1,0 +1,427 @@
+/*
+    Stylesheet only applied to Job Openings page
+*/
+
+
+/* Misc.
+========================================================================= */
+
+.job-map-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(230, 232, 230, 0.25), rgba(230, 232, 230, 0.25)), url(../images/texture_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.map-page-btn {
+    height: 70px;
+    width: 100%!important;
+}
+
+.table-list-container {
+    height: 600px!important;
+}
+
+.table-list-container td {
+    vertical-align: middle;
+}
+
+#table-list-body tr td:last-child {
+    width: 171px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .table-list-container th {
+        font-size: 18px!important;
+    }
+    
+    .table-list-container td {
+        font-size: 14px!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .table-list-container {
+        overflow: scroll!important;
+    }
+}
+
+.job-map-side-img {
+    margin: 0 -15px;
+    max-height: 170px;
+    overflow: hidden;
+}
+
+.job-map-side-img img {
+    width: 100%;
+    position: relative;
+}
+
+.link-btn {
+    margin: 0 0 30px 0;
+    display: inline-block;
+    width: 50%;
+}
+
+.link-btn a {
+    padding: 0 10px;
+}
+
+.inline-social-media-btns{
+    margin: 20px auto 0;
+    width: 100px;
+}
+
+.inline-social-media-btns .fa {
+    margin: 5px 5px;
+    height: 40px;
+    width: 40px;
+    float: left;
+    font-size: 22px!important;
+}
+
+@media (max-width: 767px) {
+    .table-list-container {
+        height: 400px!important;
+    }
+
+    .map-page-btn {
+        max-width: 300px;
+    }
+    
+    .link-btn {
+        width: 100%;
+    }
+
+    .vertically-center {
+        position: static;
+    }
+}
+
+
+/* Job Map
+========================================================================= */
+
+.job-map-region-container {
+    overflow: hidden;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.job-map-container {
+    margin: 0;
+    height: auto;
+    position: relative;
+    text-align: center;
+    background-color: #c6e0f3;
+    border-right: 2px solid #000;
+}
+
+.job-map-side-info {
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.job-map-side-info .content-header,
+.job-map-side-info .btn-container {
+    padding: 15px 0;
+}
+
+.job-map-side-info .btn-container {
+    text-align: center;
+}
+
+#job-map {
+    margin: 0;
+    padding: 10px 0;
+    max-height: 595px;
+}
+
+#job-map-key {
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    background-color: #fff;
+    border: 1px solid #000;
+    -webkit-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -o-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+}
+
+.current-openings-key, 
+.pending-openings-key {
+    margin: 0;
+    padding: 5px 10px;
+    position: relative;
+    float: left;
+}
+
+.key-label {
+    display: inline-block;
+    font-size: 14.5px;
+}
+
+.key-label::before {
+    content: "";
+}
+
+.key-color {
+    display: inline-block;
+    height: 17px;
+    width: 23px;
+    position: relative;
+    top: 5px;
+}
+
+@media (max-height: 767px) {
+    .job-map-container {
+        border-right: none;
+    }
+    
+    #job-map-key {
+        bottom: 2px;
+    }
+
+    .current-openings-key, 
+    .pending-openings-key {
+        padding: 0 5px;
+    }
+
+    .key-label {
+        font-size: 8px;
+    }
+    
+    .key-color {
+        height: 8px;
+        width: 10.8px;
+        top: 1.5px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .current-openings-key, 
+    .pending-openings-key {
+        margin: 0;
+        padding: 5px 10px;
+    }
+    
+    .key-label {
+        font-size: 13px;
+    }
+    
+    .key-label::before {
+        content: "";
+    }
+    
+    .key-color {
+        height: 15px;
+        width: 20px;
+        top: 3px;
+    }
+}
+
+.current-openings-key .key-color {
+    background-color: #1d5da7;
+}
+
+.pending-openings-key .key-color {
+    background-color: #bcbe64;
+}
+
+#job-map .state {
+    fill: #c8c8bb;
+}
+
+#job-map .state .current-client {
+    fill: #1d5da7!important;
+    cursor: pointer;
+}
+
+#job-map .state .current-client:hover {
+    fill: #16467e!important;
+}
+
+#job-map .state .pending-client {
+    fill: #bcbe64;
+    cursor: pointer;
+}
+
+#job-map .state .pending-client:hover {
+    fill: #a4a557;
+}
+
+@media (max-width: 991px) {
+    #job-map .state {
+        pointer-events: none;
+    }
+}
+
+
+/* States hover box
+========================================================================= */
+
+.state-box {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    text-align: center;
+    z-index: 300;
+    border: 1px solid #000;
+    -webkit-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    -o-box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 20px 10px rgba(0,0,0,0.1);
+}
+
+.state-box-active {
+    display: block!important;
+}
+
+#state-name-box {
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #205ea5;
+}
+
+.state-job-list {
+    height: 0;
+    width: 0;
+    overflow-y: scroll;
+    background-color: #fff;
+    -webkit-transition: width .15s ease-in-out 0s, height .2s ease-in-out .2s;
+    -moz-transition: width .15s ease-in-out 0s, height .2s ease-in-out .2s;
+    -ms-transition: width .15s ease-in-out 0s, height .2s ease-in-out .2s;
+    -o-transition: width .15s ease-in-out 0s, height .2s ease-in-out .2s;
+    transition: width .15s ease-in-out 0s, height .2s ease-in-out .2s;
+}
+
+#pending-state-job-list-body {
+    width: 100%;
+}
+
+.not-currently-scrolling-list {
+    position: relative;
+}
+
+.state-job-list tbody {
+    display: none;
+    text-align: left;
+}
+
+.state-job-list-active {
+    display: table-row-group!important;
+}
+
+.state-job-list tr {
+    border-bottom: 1px solid #000;
+}
+
+.state-job-list th,
+.state-job-list td {
+    padding: 15px;
+    text-align: left!important;
+}
+
+#current-state-job-list-header,
+#pending-state-job-list-header {
+    display: block;
+    position: absolute;
+    background-color: #d3d3d3;
+}
+
+
+/* Bottom 3 Sections
+========================================================================= */
+
+.bottom-col {
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.bottom-border {
+    border-left: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd;
+}
+
+@media (max-width: 991px) {
+    .bottom-border {
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.bottom-col h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.bottom-col h4 {
+    font-size: 21px;
+}
+
+.bottom-col p {
+    font-size: 16px;
+}
+
+.bottom-col .bottom-list-container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.bottom-col .bottom-list-container li {
+    padding: 5px 0;
+}
+
+.bottom-col .bottom-col-text ul {
+    margin-left: 20px;
+    list-style: decimal;
+    list-style-type: decimal;
+    text-align: left!important;
+}
+
+.bottom-col-icon {
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.bottom-col-icon img {
+    fill: #fff;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bottom-col-left .bottom-col-icon {
+    background-color: #1d5da7;
+}
+
+.bottom-col-mid .bottom-col-icon {
+    background-color: #1da740;
+}
+
+.bottom-col-right .bottom-col-icon {
+    background-color: #1d5da7;
+}
+
+.bottom-col-left .bottom-col-text p {
+    text-align: left;
+}

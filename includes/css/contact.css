@@ -1,0 +1,62 @@
+/*
+    Stylesheet only applied to contact us page
+*/
+
+.contact-col {
+    text-align: center;
+}
+
+.contact-border {
+    border-left: 4px solid #1d5da7;
+    border-right: 4px solid #1d5da7;
+}
+
+.contact-col h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contact-col h4 {
+    font-size: 21px;
+}
+
+.contact-col p {
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .contact-border {
+        padding: 15px 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    #region-three {
+        padding: 10px 0 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-border {
+        padding: 30px 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .contact-col h2 {
+        font-size: 34px;
+        font-weight: bold;
+    }
+    
+    .contact-col h4 {
+        font-size: 25px;
+    }
+    
+    .contact-col p {
+        font-size: 19px;
+    }
+
+    #region-three {
+        padding: 10px 0 30px;
+    }
+}

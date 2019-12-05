@@ -1,0 +1,52 @@
+/*
+    Stylesheet only applied to faq page
+*/
+
+.faq-dropdown-container {
+    margin: 10px 0;
+}
+
+.faq-dropdown-container .dropdown {
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #d2d3d2
+}
+
+.faq-dropdown-container .dropdown:hover,
+.faq-dropdown-container .dropdown-active {
+    color: #fff;
+    background-color: #1d5da7;
+}
+
+.faq-dropdown-container .dropdown::after {
+    float: right;
+    content: '\002B';
+}
+
+.faq-dropdown-container .dropdown-active::after {
+    float: right;
+    content: '\2212';
+}
+
+.faq-dropdown-container .dropdown-content {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: #e6e8e6;
+    -webkit-transition: height 0.2s ease-out;
+    -moz-transition: height 0.2s ease-out;
+    -ms-transition: height 0.2s ease-out;
+    -o-transition: height 0.2s ease-out;
+    transition: height 0.2s ease-out;
+} 
+
+.faq-dropdown-container .dropdown-content p {
+    margin: 15px;
+    font-size: 18px;
+}

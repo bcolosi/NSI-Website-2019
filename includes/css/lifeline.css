@@ -1,0 +1,49 @@
+/*
+    Stylesheet only applied to Lifeline page
+*/
+
+.table-list-container {
+    height: 500px;
+}
+
+.texture-bkgd {
+    background-position: center;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/texture_3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+    .table-list-container {
+        height: 400px;
+    }
+
+    #table-header {
+        font-size: 38px!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .table-list-container {
+        height: 560px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1384px){
+    .overlay {
+        padding: 10px 15px!important;
+    }
+
+    .overlay h2,
+    .overlay p {
+        padding: 5px;
+    }
+
+    .overlay h2{
+        font-size: 42px;
+    }
+
+    .overlay p {
+        font-size: 18px;
+    }
+}
