@@ -219,7 +219,7 @@ function sync_col_width(tableBodyId, tableHeaderId){
                 var lastMod = new Date(req.getResponseHeader("Last-Modified"));
                 lastMod = (lastMod.getMonth() + 1) + '/' + lastMod.getDate() + '/' + lastMod.getFullYear();
 
-                $('.last-updated').html('Last Updated: ' + lastMod);
+                //$('.last-updated').html('Last Updated: ' + lastMod);
 
                 for(var row = 0; row < csv_data.length; row++){
                     var tableRow = '<tr>';
