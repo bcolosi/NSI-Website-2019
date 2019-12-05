@@ -107,7 +107,7 @@ function sync_col_width(tableBodyId, tableHeaderId){
     $.fn.openModal = function(){
         $(this).click(function(evt){
             evt.preventDefault();
-            $('head').append('<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>');
+            $('head').append('<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script>');
             $('.modal').show();
             $('body').lockScrollBar();
             sync_col_width('table-list', 'table-list-header');
