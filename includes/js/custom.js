@@ -277,7 +277,7 @@ function sync_col_width(tableBodyId, tableHeaderId){
                 }
                 $('#'+ bodyTableId +' tbody').append(tableBody);
                 setTimeout(function(){
-                    $('head').append('<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>');
+                    $('head').append('<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script>');
                 }, 250);
             }
         });
