@@ -272,7 +272,7 @@
                                                 </tbody>
                                             </table>
                                             <div class="form-btn-container">
-                                                <button id="form-btn" type="submit" name="submit">Submit</button>
+                                                <button id="form-btn" type="submit" name="submit" onclick="alert('Thank you for applying to NSI Nursing Solutions, inc.  A representative will reach out to you shortly.  If you wish to contact us, please call (866) 266-8748.  Our office hours are M-F, 8:00am to 5:00pm, EST.');">Submit</button>
                                             </div>
                                         </form>
                                     </div>
