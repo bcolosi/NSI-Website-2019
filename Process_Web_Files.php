@@ -43,7 +43,10 @@
     $fileArrayLength = count($fileArray);
 
     for($i = 0; $i < $fileArrayLength; $i++){
-        if($fileArray[$i]["error"] == UPLOAD_ERR_OK){
+        if(!isset($fileArray[$i]){
+            $log = date("F j, Y, g:i a").": No file was uploade, therefore it will be ignored. ".PHP_EOL;
+        }
+        else if($fileArray[$i]["error"] == UPLOAD_ERR_OK){
             $tempName = $fileArray[$i]["tmp_name"];
             $target = "./Documents/". $fileNameArray[$i];
             if(move_uploaded_file($tempName, $target)){
