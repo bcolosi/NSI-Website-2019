@@ -1,9 +1,3 @@
-<?php
-    if(isset($_POST['submit']){
-        $alertMsg = "Thank you for applying to NSI Nursing Solutions, inc.  A representative will reach out to you shortly.  If you wish to contact us, please call (866) 266-8748.  Our office hours are M-F, 8:00am to 5:00pm, EST.";
-		echo "<script type='text/javascript'>alert('".$alertMsg."');</script>";
-    }
-?>
 <!DOCTYPE html>
 <html>
     <?php include("../includes/includes.html") ?>
