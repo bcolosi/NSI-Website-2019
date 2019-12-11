@@ -10,6 +10,9 @@
             $(document).ready(function() {
                 $('#content-bkgrd-quotes').quoteHandler({});
                 $('.input-phone-num').change(function(){ $(this).val(formatPhoneNum($(this).val())); });
+                $('#contact-form').submit(function(){
+                    alert("Thank you for applying to NSI Nursing Solutions, inc.  A representative will reach out to you shortly.  If you wish to contact us, please call (866) 266-8748.  Our office hours are M-F, 8:00am to 5:00pm, EST.");
+                });
             });
         </script>
     </head>
