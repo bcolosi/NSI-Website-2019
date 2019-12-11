@@ -1,6 +1,7 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php"); ?>
 <!DOCTYPE html>
 <html>
-    <?php include("includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html") ?>
     <head>
         <title>Lifeline - NSI Nursing Solutions Inc.</title>
         <link rel="stylesheet" href="/includes/css/lifeline.css">
@@ -28,6 +29,9 @@
             }
 
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Lifeline.json');
+
                 // Fill in table header
                 $('#table-header').html(tableHeader);
 
@@ -39,23 +43,20 @@
     </head>
     <body>
         <div id="page">
-            <?php include("includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '/Lifeline.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div id="banner-img">
                     <img src="/includes/images/banner/handshake.jpg">
                     <div class="overlay">
-                        <h2>Lifeline</h2>
-                        <p>
-                            Lifeline provides senior-level executives with 
-                            a place to both network and locate job opportunities.  
-                            Lifeline is updated monthly, so check back often.
-                            If you would like to add a position to Lifeline or  
-                            if you want to receive this free monthly publication, 
-                            please contact Michael Colosi at 
-                            <a class="overlay-link" href="mailto:macolosi@nsinursingsolutions.com?subject=NSI%20Inquiry">
-                                macolosi@nsinursingsolutions.com
-                            </a>.
-                        </p>
+                        <h2></h2>
+                        <p></p>
                     </div>
                 </div>
                 <div id="region-three" class="texture-bkgd">
@@ -82,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <?php include("includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>

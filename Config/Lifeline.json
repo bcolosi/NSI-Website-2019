@@ -1,0 +1,28 @@
+[
+    [
+        {
+            "element": "#banner-img .overlay h2",
+            "text": "Lifeline"
+        },
+        {
+            "element": "#banner-img .overlay p",
+            "text": "Lifeline provides senior-level executives with a place to both network and locate job opportunities. Lifeline is updated monthly, so check back often. If you would like to add a position to Lifeline or if you want to receive this free monthly publication, please contact Michael Colosi at <a class='overlay-link' href='mailto:macolosi@nsinursingsolutions.com?subject=NSI%20Inquiry'>macolosi@nsinursingsolutions.com</a>."
+        },
+        {
+            "element": "#region-three #content-head .CEO-COO-header",
+            "text": "CEO and COO Opportunities"
+        },
+        {
+            "element": "#region-three #content-head .CHRO-header",
+            "text": "CHRO and VPHR Opportunities"
+        },
+        {
+            "element": "#region-three #content-head .CFO-header",
+            "text": "CFO OPPORTUNITIES"
+        },
+        {
+            "element": "#region-three #content-head .CNO-header",
+            "text": "CNO OPPORTUNITIES"
+        }
+    ]
+]

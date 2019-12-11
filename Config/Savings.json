@@ -1,0 +1,20 @@
+[
+    [
+        {
+            "element": "#region-one #content-head h1",
+            "text": "Contract labor expenses continue to deteriorate hospital margins. NSI will work closely with you to build the right program to maximize your savings."
+        },
+        {
+            "element": "#region-two #content-head h1",
+            "text": "Savings Calculator"
+        },
+        {
+            "element": "#region-two .savings-box-info-header",
+            "text": "The NSI Difference"
+        },
+        {
+            "element": "#region-two .savings-box-info-txt-container",
+            "text": "<p>For every 30 nurses hired, you can realize between $1.8 - $2.3 million saved. This savings is attributed to replacing costly travel RNs with staff RNs. Generally, clients can recoup their investment in as little as 22 weeks depending upon: </p><ul><li>Number of travel RNs to replace</li><li>Cost of contract labor</li><li>Current staff RN labor costs</li></ul><p>Then there are the intangible returns: improved patient experience, physician satisfaction, employee engagement, reduced turnover, better quality & patient care outcomes. Contact us for a more detailed analysis.</p>"
+        }
+    ]
+]

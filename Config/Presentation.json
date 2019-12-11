@@ -1,0 +1,16 @@
+[
+    [
+        {
+            "element": "#banner-img .overlay h2",
+            "text": "About Us"
+        },
+        {
+            "element": "#banner-img .overlay .overlay-txt",
+            "text": "<p>The nursing shortage continues to challenge all health care organizations to hire experienced nurses. Since 2000, hospitals have partnered with NSI to quickly solve their staffing shortage. Whether you need to hire 20 or 200 experienced RNs, NSI has the national reach and experience to meet your recruitment goals. </p><p>Enjoy the presentation below to learn about NSI and begin your path to full staffing.</p>"
+        },
+        {
+            "element": "#region-three #content-head h1",
+            "text": "Sales Presentation"
+        }
+    ]
+]

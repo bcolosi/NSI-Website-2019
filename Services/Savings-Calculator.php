@@ -1,18 +1,29 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php"); ?>
 <!DOCTYPE html>
 <html>
-    <?php include("../includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html") ?>
     <head>
         <title>Savings Calculator - NSI Nursing Solutions Inc.</title>
         <link rel="stylesheet" href="/includes/css/savings.css">
         <script type="text/javascript">
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Savings.json');
+                
                 $('#savings-form').savingsCalculator();
             });
         </script>
     </head>
     <body>
         <div id="page">
-            <?php include("../includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '/Savings.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div id="banner-img">
                     <img src="/includes/images/banner/savings.jpg">
@@ -22,11 +33,7 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1 class="savings-header">
-                                        Contract labor expenses continue to deteriorate  
-                                        hospital margins. NSI will work closely with you to build the right 
-                                        program to maximize your savings.
-                                    </h1>
+                                    <h1 class="savings-header"></h1>
                                 </div>
                                 <div id="content-body">
                                     
@@ -40,35 +47,14 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>Savings Calculator</h1>
+                                    <h1></h1>
                                 </div>
                                 <div id="content-body">
                                     <div class="content-box savings-content-box">
                                         <div class="savings-box-left col-md-6">
                                             <div class="savings-box-info content-text">
-                                                <h2 class="savings-box-info-header">The NSI Difference</h2>
-                                                <p class="savings-box-info-paragraph">
-                                                    For every 30 nurses hired, you can realize between $1.8 - $2.3 million 
-                                                    saved. This savings is attributed to replacing costly travel RNs with 
-                                                    staff RNs.  Generally, clients can recoup their investment in as little 
-                                                    as 22 weeks depending upon: 
-                                                </p>
-                                                <ul class="savings-box-info-list">
-                                                    <li>
-                                                        Number of travel RNs to replace
-                                                    </li>
-                                                    <li>
-                                                        Cost of contract labor
-                                                    </li>
-                                                    <li>
-                                                        Current staff RN labor costs
-                                                    </li>
-                                                </ul>
-                                                <p class="savings-box-info-paragraph">
-                                                    Then there are the intangible returns: improved patient experience, physician 
-                                                    satisfaction, employee engagement, reduced turnover, better quality 
-                                                    & patient care outcomes. Contact us for a more detailed analysis.
-                                                </p>
+                                                <h2 class="savings-box-info-header"></h2>
+                                                <div class="savings-box-info-txt-container"></div>
                                             </div>
                                             <div class="bottom-positioned">
                                                 <div class="link-btn">
@@ -215,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <?php include("../includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>

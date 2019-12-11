@@ -46,7 +46,7 @@
         if(!isset($fileArray[$i])){
             $log = date("F j, Y, g:i a").": No file was uploade, therefore it will be ignored. ".PHP_EOL;
         }
-        else if($fileArray[$i]["error"] == UPLOAD_ERR_OK)){
+        else if($fileArray[$i]["error"] == UPLOAD_ERR_OK){
             $tempName = $fileArray[$i]["tmp_name"];
             $target = "./Documents/". $fileNameArray[$i];
             if(move_uploaded_file($tempName, $target)){

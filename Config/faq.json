@@ -1,0 +1,72 @@
+[
+    [
+        {
+            "element": "#region-three #content-head h1",
+            "text": "Frequently Asked Questions"
+        },
+        {
+            "element": "#region-three .faq-box1 strong",
+            "text": "Why choose NSI?"
+        },
+        {
+            "element": "#region-three .faq-box1 .dropdown-content p",
+            "text": "NSI is a full-service recruitment and retention company. We contract only with clients that meet our high standards of excellence and take an executive approach to recruitment. With our red-carpet/white-glove treatment, you will enjoy a personal recruiter, industry leading recruitment incentives, immediate interview feedback, relocation assistance and a customized on-boarding process. All at no cost to you."
+        },
+        {
+            "element": "#region-three .faq-box2 strong",
+            "text": "How do I get started?"
+        },
+        {
+            "element": "#region-three .faq-box2 .dropdown-content p",
+            "text": "It's easy. If you choose to <a href='/Job-Seekers/Job-Openings.php'>apply online</a>, a Representative will contact you within 24 business hours to verify your basic information and discuss the opportunity. If you would like to contact us by telephone, NSI can be reached by calling toll free <a class='phone-num' href='tel:8662668748'>(866) BONUS 4U</a> or <a class='phone-num' href='tel:8662668748'>(866) 266-8748</a>. Our office hours are Monday-Friday, 8:00am-5:00pm, EST."
+        },
+        {
+            "element": "#region-three .faq-box3 strong",
+            "text": "What if I am interested in interviewing at the hospital?"
+        },
+        {
+            "element": "#region-three .faq-box3 .dropdown-content p",
+            "text": "Your personal recruiter will walk you through each step of the process including: travel & hotel accommodations, directions, application process, documentation requirements, etc. During the hospital interview, you will meet the Nurse Manager or designee for your particular specialty. You will take a tour and learn more about the unit, the patient population, scheduling, shifts, staffing ratios, EMR, orientation, etc."
+        },
+        {
+            "element": "#region-three .faq-box4 strong",
+            "text": "When should I expect to receive a decision from the Hospital?"
+        },
+        {
+            "element": "#region-three .faq-box4 .dropdown-content p",
+            "text": "In most cases, your personal recruiter will provide immediate feedback following the interview. During this time, pay, benefits, relocation, offer conditions, and start dates are also discussed."
+        },
+        {
+            "element": "#region-three .faq-box5 strong",
+            "text": "Whose employee am I?"
+        },
+        {
+            "element": "#region-three .faq-box5 .dropdown-content p",
+            "text": "Should you accept a position, you will become a core staff employee of our client, not an employee of NSI Nursing Solutions, inc."
+        },
+        {
+            "element": "#region-three .faq-box6 strong",
+            "text": "If I do not see my ideal position, should I still apply now?"
+        },
+        {
+            "element": "#region-three .faq-box6 .dropdown-content p",
+            "text": "Yes. We will collect your information and create a profile of your interests. By doing this, we can fast-track you as soon as the opportunity becomes available."
+        },
+        {
+            "element": "#region-three .faq-box7 strong",
+            "text": "Is there Relocation Assistance?"
+        },
+        {
+            "element": "#region-three .faq-box7 .dropdown-content p",
+            "text": "Yes. Your personal recruiter will provide you with specific relocation information at the time of your telephonic interview. Upon accepting an offer, you will be connected with a preferred realtor, and receive housing and licensing information."
+        },
+        {
+            "element": "#region-three .faq-box8 strong",
+            "text": "Is there a Referral Bonus?"
+        },
+        {
+            "element": "#region-three .faq-box8 .dropdown-content p",
+            "text": "Yes. NSI offers a $500 bonus for referring an eligible nurse and you can refer as many as you wish. Simply have your colleague call NSI at <a class='phone-num' href='tel:8662668748'>(866) BONUS 4U</a> or <a class='phone-num' href='tel:8662668748'>(866) 266-8748</a>. During this call, they must state that they were referred by you and provide your address and telephone number. If he/she is hired through NSI within a year and satisfy their incentive agreement, a check for $500 will be mailed to you."
+        }
+    ]
+]

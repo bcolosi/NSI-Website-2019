@@ -1,0 +1,92 @@
+[
+    [
+        {
+            "element": "#region-one .content-text h1",
+            "text": "Featured Article"
+        },
+        {
+            "element": "#region-one .content-text h2",
+            "text": "NSI National Health Care & RN Retention Report"
+        },
+        {
+            "element": "#region-one .content-text p",
+            "text": "This annual report is the most comprehensive study in the industry which allows you to benchmark your hospital's recruitment and turnover performance, and understand emerging trends in the industry."
+        },
+        {
+            "element": "#region-two #content-head h1",
+            "text": "NSI Research Library"
+        },
+        {
+            "element": "#region-two .library-content-box1 h4",
+            "text": "NSI Case Study"
+        },
+        {
+            "element": "#region-two .library-content-box1 p",
+            "text": "High turnover and vacancy rates were affecting the patient experience at Citizens Medical Center. Focusing on quality of care and financial conservatism, CMC was determined to hire 21 experienced staff Registered Nurses."
+        },
+        {
+            "element": "#region-two .library-content-box2 h4",
+            "text": "Travel Nurse Use Study"
+        },
+        {
+            "element": "#region-two .library-content-box2 p",
+            "text": "This report compares the use and cost of travel nurses to hiring \"Employed\" nurses. It illustrates hospital cost savings and profit improvement. Discover how to receive an immediate cost savings, improve cash flow, enhance the bottom line and improve quality patient care services."
+        },
+        {
+            "element": "#region-two .library-content-box3 h4",
+            "text": "Foreign Nurse Use Study"
+        },
+        {
+            "element": "#region-two .library-content-box3 p",
+            "text": "This report compares the use and cost of foreign nurse recruitment to U.S. nurse recruitment. It illustrates hospital cost savings and profit improvement. Discover how to receive an immediate cost savings, improve cash flow, enhance the bottom line and improve quality patient care services."
+        },
+        {
+            "element": "#region-two .library-content-box4 h4",
+            "text": "Nurse Cultural Review"
+        },
+        {
+            "element": "#region-two .library-content-box4 p",
+            "text": "This indicator identifies your hospital's culture and it's \"attractiveness\" as related to the retention of nurses. After evaluating each statement, a broad description of the cultural performance, and suggestions to enhance employee morale, engagement and retention will be provided."
+        },
+        {
+            "element": "#region-two .library-content-box5 h4",
+            "text": "RN Labor Market Update"
+        },
+        {
+            "element": "#region-two .library-content-box5 p",
+            "text": "A current and high-level analysis of the RN labor market. Topics include: workforce analytics, labor statistics, vacancy rates, turnover, staffing trends, survey results, recruitment metrics, etc..."
+        },
+        {
+            "element": "#region-two .library-content-box6 h4",
+            "text": "NSI In The News"
+        },
+        {
+            "element": "#region-two .library-content-box6 p",
+            "text": "Scroll through featured articles and coverage of NSI in the media."
+        },
+        {
+            "element": "#region-two .library-content-box7 h4",
+            "text": "H.E.L.P. Survey Results (CEO)"
+        },
+        {
+            "element": "#region-two .library-content-box7 p",
+            "text": "The Hospital Executive Level Priorities (H.E.L.P.) survey takes the annual pulse of hospital CEOs to understand the top challenges and issues facing healthcare."
+        },
+        {
+            "element": "#region-two .library-content-box8 h4",
+            "text": "H.E.L.P. Survey Results (CHRO)"
+        },
+        {
+            "element": "#region-two .library-content-box8 p",
+            "text": "The Hospital Executive Level Priorities (H.E.L.P.) survey takes the annual pulse of senior Human Resource Executives to understand the top challenges and issues facing healthcare."
+        },
+        {
+            "element": "#region-two .library-content-box9 h4",
+            "text": "H.E.L.P. Survey Results (CNE)"
+        },
+        {
+            "element": "#region-two .library-content-box9 p",
+            "text": "The Hospital Executive Level Priorities (H.E.L.P.) survey takes the annual pulse of senior Nursing Executives to understand the top challenges and issues facing healthcare."
+        }
+    ]
+]
