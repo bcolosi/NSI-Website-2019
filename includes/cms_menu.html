@@ -1,0 +1,29 @@
+<div id="cms-menu">
+    <div class="vertically-center">
+        <span class="cms-red-circle"></span>
+        <strong class="cms-status">CMS Active!</strong>
+    </div>
+    <form id="cms-form" method="POST" action="" class="cms-btn-container">
+        <button type="submit" name="cms-save" value="save">Save Changes</button>
+        <button type="submit" name="cms-undo" value="undo">Undo Changes</button>
+        <button type="submit" name="cms-logoff" value="logoff">Logout</button>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.slides li.clone .cms-input-container').each(function(){
+                $(this).remove();
+            });
+            $('.cms-item').on('dblclick', function(){
+                $(this).next('.cms-input-container').show();
+                $(this).hide();
+            });
+            setTimeout(function(){
+                $('.cms-item').each(function(){
+                    if($(this).html() == ""){
+                        $(this).html("** PLACEHOLDER **");
+                    }
+                });
+            }, 1000);
+        });
+    </script>
+</div>

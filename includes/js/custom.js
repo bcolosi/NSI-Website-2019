@@ -122,6 +122,15 @@ function sync_col_width(tableBodyId, tableHeaderId){
         });
     }
 
+    $.fn.loadPageText = function(txtFilePath){
+        $.getJSON(txtFilePath, function(data){
+            data = data[0];
+            for(var i = 0; i < data.length; i++){
+                $(data[i].element).html(data[i].text);
+            }
+        });
+    }
+
     // Creates trigger for collapsible menu transitions
     $.fn.collapseObj = function(evt, activeClassName){
         $(this).on(evt, function(){

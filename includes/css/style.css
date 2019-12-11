@@ -558,6 +558,67 @@ body {
     }
 }
 
+#cms-menu {
+    margin: 0 auto;
+    padding: 10px 15px;
+    width: 500px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 100000;
+    background-color: #1d5da7;
+}
+
+.cms-status {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+}
+
+.cms-red-circle {
+    height: 13px;
+    width: 13px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #ff0000;
+}
+
+#cms-form {
+    float: right;
+}
+
+#cms-form button {
+    margin: 0 5px;
+    padding: 4px;
+    
+    width: auto;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #1d5da7!important;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cms-input-container {
+    display: none;
+}
+
+.cms-input-container textarea {
+    height: auto;
+    width: auto;
+    color: #000;
+}
+
 .scroll-lock {
     position: fixed;
     overflow-y: scroll;
