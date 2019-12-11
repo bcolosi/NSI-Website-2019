@@ -5,6 +5,7 @@
         <title>Sales Presentation - NSI Nursing Solutions Inc.</title>
         <meta name="description" content="The nursing shortage is challenging all health care organizations. Review our sales presentation to learn how NSI can help you replace costly travel RNs with experienced nurses as your employees.">
         <link rel="stylesheet" href="/includes/css/sales-presentation.css">
+        <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#pwr-pt-pres').loadPresentation();
