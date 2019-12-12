@@ -69,6 +69,17 @@ function sync_col_width(tableBodyId, tableHeaderId){
     return;
 }
 
+// Checks values of array to make sure they are not all blank
+function isEmptyArray(array){
+    for(var i = 0; i < array.length; i++){
+        if(array[i] != ""){
+            return false;
+        }
+    }
+    
+    return true;
+}
+
 
 // jQuery **************************************************************
 
@@ -229,6 +240,11 @@ function sync_col_width(tableBodyId, tableHeaderId){
                     var shareLocation = window.location.href;
                     var shareDescription = (stateColNum != -1) ? ' in ' + cellData[stateColNum] + ' - ' + cellData[incentiveColNum] + 'Sign-on Bonus, ' + cellData[unitColNum] + ' Position' : '';
                     var shareTitle = 'NSI Nursing Opportunity' + shareDescription;
+
+                    // Check for empty row
+                    if(isEmptyArray(cellData)){
+                        continue;
+                    }
                     
                     for(var col = 0; col < cellData.length; col++){
                         var colNumLabel = '>';
