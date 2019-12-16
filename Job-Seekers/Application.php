@@ -113,7 +113,7 @@
                                         <div class="center-text content-text">
                                             <h2 class="application-header">NSI Contact Form</h2>
                                         </div>
-                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST">
+                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST" enctype="multipart/form-data">
                                             <table class="form-table">
                                                 <tbody>
                                                     <tr class="required-input">
