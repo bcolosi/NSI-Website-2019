@@ -3,14 +3,25 @@
     error_reporting(E_ERROR | E_WARNING | E_PARSE);
     session_start();
 
+    // Check to see if user is on mobile browser
+    function isMobile(){
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
     // Test to enable CMS
     function check_key($recivedKey){
         if(isset($recivedKey)){
+            // Check to see if user is on phone
+            if(isMobile()){
+                return false;
+            }
+
             // Connect to DB
             $databaseConnection = new mysqli('nsiats.mysql.database.azure.com', 'adminsa@nsiats', 'e0375906', 'nsiats');
             if($databaseConnection->connect_error){
                 echo "PHP Version: ".phpversion()."<br>";
                 die("Database selection failed: ". $databaseConnection->connect_error);
+                return false;
             }
 
             // Get keys from DB
@@ -80,55 +91,57 @@
         }
     }
 
-    // Adds new entry to json file and removes the oldest
-    // entry if needed
-    if(isset($_POST['cms-save'])){
-        // Get json file
-        $data = get_json($_POST['jsonName']);
-        if($data != NULL){
-            // Check to see if the data was sent and format it
-            if(is_array($_POST['cms-element']) && is_array($_POST['cms-text'])){
-                // Get data from form
-                foreach($_POST['cms-element'] as $rec=> $value){
-                    $formData[$rec] = (object) ['element' => $_POST['cms-element'][$rec], 'text' => $_POST['cms-text'][$rec]];
+    if(check_key($_SESSION['CMSActive'])){
+        // Adds new entry to json file and removes the oldest
+        // entry if needed
+        if(isset($_POST['cms-save'])){
+            // Get json file
+            $data = get_json($_POST['jsonName']);
+            if($data != NULL){
+                // Check to see if the data was sent and format it
+                if(is_array($_POST['cms-element']) && is_array($_POST['cms-text'])){
+                    // Get data from form
+                    foreach($_POST['cms-element'] as $rec=> $value){
+                        $formData[$rec] = (object) ['element' => $_POST['cms-element'][$rec], 'text' => $_POST['cms-text'][$rec]];
+                    }
                 }
-            }
-            else{
-                $formData = NULL;
-            }
-
-            // Prepend form data to json data
-            if($formData != NULL){
-                array_unshift($data, $formData);
-
-                // Removes the oldest version of text
-                if(count($data) > 4){
-                    array_pop($data);
+                else{
+                    $formData = NULL;
                 }
 
-                // Save to json file
-                save_to_json($_POST['jsonName'], $data);
+                // Prepend form data to json data
+                if($formData != NULL){
+                    array_unshift($data, $formData);
+
+                    // Removes the oldest version of text
+                    if(count($data) > 4){
+                        array_pop($data);
+                    }
+
+                    // Save to json file
+                    save_to_json($_POST['jsonName'], $data);
+                }
             }
         }
-    }
-    // Deletes the most recent entry in json file
-    else if(isset($_POST['cms-undo'])){
-        // Get contents of json file
-        $data = get_json($_POST['jsonName']);
-        if($data != NULL){
-            // Remove first element of array if possible
-            if(count($data) > 1){
-                array_shift($data);
-                save_to_json($_POST['jsonName'], $data);
-            }
-            else{
-                $msg = "Cannot undo anymore changes.";
-                echo "<script type='text/javascript'>alert('$msg');</script>";
+        // Deletes the most recent entry in json file
+        else if(isset($_POST['cms-undo'])){
+            // Get contents of json file
+            $data = get_json($_POST['jsonName']);
+            if($data != NULL){
+                // Remove first element of array if possible
+                if(count($data) > 1){
+                    array_shift($data);
+                    save_to_json($_POST['jsonName'], $data);
+                }
+                else{
+                    $msg = "Cannot undo anymore changes.";
+                    echo "<script type='text/javascript'>alert('$msg');</script>";
+                }
             }
         }
-    }
-    // Clear key from session and close CMS
-    else if(isset($_POST['cms-logoff'])){
-        $_SESSION['CMSActive'] = "";
+        // Clear key from session and close CMS
+        else if(isset($_POST['cms-logoff'])){
+            $_SESSION['CMSActive'] = "";
+        }
     }
 ?>

@@ -69,6 +69,17 @@ function sync_col_width(tableBodyId, tableHeaderId){
     return;
 }
 
+// Checks values of array to make sure they are not all blank
+function isEmptyArray(array){
+    for(var i = 0; i < array.length; i++){
+        if(array[i] != ""){
+            return false;
+        }
+    }
+
+    return true;
+}
+
 
 // jQuery **************************************************************
 
@@ -218,17 +229,13 @@ function sync_col_width(tableBodyId, tableHeaderId){
             type: "GET",
             url: csv_path,
             dataType: "text",
-            success: function(data, unused, req){
+            success: function(data, status, req){
                 // Get data from csv file and put it in the table
                 var csv_data = $.csv.toArrays(data);
                 var tableBody = '';
                 var stateColNum = -1;
                 var incentiveColNum = -1;
                 var unitColNum = -1;
-                var lastMod = new Date(req.getResponseHeader("Last-Modified"));
-                lastMod = (lastMod.getMonth() + 1) + '/' + lastMod.getDate() + '/' + lastMod.getFullYear();
-
-                //$('.last-updated').html('Last Updated: ' + lastMod);
 
                 for(var row = 0; row < csv_data.length; row++){
                     var tableRow = '<tr>';
@@ -238,6 +245,11 @@ function sync_col_width(tableBodyId, tableHeaderId){
                     var shareLocation = window.location.href;
                     var shareDescription = (stateColNum != -1) ? ' in ' + cellData[stateColNum] + ' - ' + cellData[incentiveColNum] + 'Sign-on Bonus, ' + cellData[unitColNum] + ' Position' : '';
                     var shareTitle = 'NSI Nursing Opportunity' + shareDescription;
+
+                    // Check for empty row
+                    if(isEmptyArray(cellData)){
+                        continue;
+                    }
                     
                     for(var col = 0; col < cellData.length; col++){
                         var colNumLabel = '>';
