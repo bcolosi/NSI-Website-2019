@@ -30,8 +30,10 @@
                 <div id="banner-img">
                     <img src="/includes/images/banner/business-meeting.jpg">
                     <div class="overlay">
-                        <h2></h2>
-                        <div class="overlay-txt"></div>
+                        <h2 class="cms-item"></h2>
+                        <?php echo create_cms_input($jsonFileName, '#banner-img .overlay h2'); ?>
+                        <div class="overlay-txt cms-item"></div>
+                        <?php echo create_cms_input($jsonFileName, '#banner-img .overlay .overlay-txt'); ?>
                     </div>
                 </div>
                 <div id="region-three" class="pwr-pt-bkgrd">
@@ -39,7 +41,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1></h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="pwr-pt-wrapper">

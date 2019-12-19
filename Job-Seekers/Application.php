@@ -36,15 +36,20 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1></h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-one #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="process-step process-step1 col-md-3">
-                                        <h2 class="process-header"></h2>
+                                        <h2 class="process-header cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-header'); ?>
                                         <ol class="nsi-process-list">
-                                            <li class="process-list-li1"></li>
-                                            <li class="process-list-li2"></li>
-                                            <li class="process-list-li3"></li>
+                                            <li class="process-list-li1 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li1'); ?>
+                                            <li class="process-list-li2 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li2'); ?>
+                                            <li class="process-list-li3 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li3'); ?>
                                         </ol>
                                     </div>
                                     <div class="col-md-6">
@@ -57,12 +62,16 @@
                                             </td>
                                             <td class="process-step process-step2 process-info">
                                                 <div class="process-header-container">
-                                                    <h2 class="process-header"></h2>
+                                                    <h2 class="process-header cms-item"></h2>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-header'); ?>
                                                 </div>
                                                 <ol class="nsi-process-list">
-                                                    <li class="process-list-li1"></li>
-                                                    <li class="process-list-li2"></li>
-                                                    <li class="process-list-li3"></li>
+                                                    <li class="process-list-li1 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li1'); ?>
+                                                    <li class="process-list-li2 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li2'); ?>
+                                                    <li class="process-list-li3 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li3'); ?>
                                                 </ol>
                                             </td>
                                             <td class="arrow-container hidden-xs hidden-sm">
@@ -75,12 +84,16 @@
                                     </div>
                                     <div class="process-step process-step3 col-md-3">
                                         <div class="process-header-container">
-                                            <h2 class="process-header"></h2>
+                                            <h2 class="process-header cms-item"></h2>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-header'); ?>
                                         </div>
                                         <ol class="nsi-process-list">
-                                            <li class="process-list-li1"></li>
-                                            <li class="process-list-li2"></li>
-                                            <li class="process-list-li3"></li>
+                                            <li class="process-list-li1 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li1'); ?>
+                                            <li class="process-list-li2 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li2'); ?>
+                                            <li class="process-list-li3 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li3'); ?>
                                         </ol>
                                     </div>
                                 </div>
@@ -93,7 +106,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1></h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-two #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div id="content-bkgrd-quotes" class="">
@@ -102,7 +116,8 @@
                                     </div>
                                     <div class="content-box app-content-box">
                                         <div class="center-text content-text">
-                                            <h2 class="application-header"></h2>
+                                            <h2 class="application-header cms-item"></h2>
+                                            <?php echo create_cms_input($jsonFileName, '#region-two .application-header'); ?>
                                         </div>
                                         <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST">
                                             <table class="form-table">
@@ -280,7 +295,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-body">
-                                    <div class="content-text center-text eeo-statement"></div>
+                                    <div class="content-text center-text eeo-statement cms-item"></div>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three .eeo-statement'); ?>
                                 </div>
                             </div>
                         </div>

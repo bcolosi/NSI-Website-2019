@@ -33,7 +33,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1 class="savings-header"></h1>
+                                    <h1 class="savings-header cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-one #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     
@@ -47,14 +48,17 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1></h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-two #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="content-box savings-content-box">
                                         <div class="savings-box-left col-md-6">
                                             <div class="savings-box-info content-text">
-                                                <h2 class="savings-box-info-header"></h2>
-                                                <div class="savings-box-info-txt-container"></div>
+                                                <h2 class="savings-box-info-header cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .savings-box-info-header'); ?>
+                                                <div class="savings-box-info-txt-container cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .savings-box-info-txt-container'); ?>
                                             </div>
                                             <div class="bottom-positioned">
                                                 <div class="link-btn">

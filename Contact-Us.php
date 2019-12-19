@@ -34,13 +34,16 @@
                             <div id="content">
                                 <div id="content-body">
                                     <div class="col-md-4">
-                                        <div class="contact-col contact-col1"></div>
+                                        <div class="contact-col contact-col1 cms-item"></div>
+                                        <?php echo create_cms_input($jsonFileName, '.contact-col1'); ?>
                                     </div>
                                     <div class="col-md-4 contact-border">
-                                        <div class="contact-col contact-col2"></div>
+                                        <div class="contact-col contact-col2 cms-item"></div>
+                                        <?php echo create_cms_input($jsonFileName, '.contact-col2'); ?>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="contact-col contact-col3"></div>
+                                        <div class="contact-col contact-col3 cms-item"></div>
+                                        <?php echo create_cms_input($jsonFileName, '.contact-col3'); ?>
                                         <div class="link-btn">
                                             <a href="/Job-Seekers/Application.php">Apply Now!</a>
                                         </div>

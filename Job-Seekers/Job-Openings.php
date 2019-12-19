@@ -262,11 +262,14 @@
                                             <div class="job-map-side-info">
                                                 <div class="vertically-center">
                                                     <div class="content-header">
-                                                        <h1 class="content-header"></h1>
+                                                        <h1 class="content-header cms-item"></h1>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info h1'); ?>
                                                     </div>
                                                     <div class="content-text">
-                                                        <p class="job-map-side-info-txt"></p>
-                                                        <p class="eeo-statement"></p>
+                                                        <p class="job-map-side-info-txt cms-item"></p>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info .job-map-side-info-txt'); ?>
+                                                        <p class="eeo-statement cms-item"></p>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info .eeo-statement'); ?>
                                                     </div>
                                                     <div class="btn-container">
                                                         <div class="link-btn col-sm-6">
@@ -300,9 +303,10 @@
                                                 <img src="/includes/images/icon/people-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2></h2>
-                                                <div class="content-text">
-                                                </div>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-left h2'); ?>
+                                                <div class="content-text cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-left .content-text'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -312,8 +316,10 @@
                                                 <img src="/includes/images/icon/money-bag-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2></h2>
-                                                <div class="content-text"></div>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-mid h2'); ?>
+                                                <div class="content-text cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-mid .content-text'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -323,8 +329,10 @@
                                                 <img src="/includes/images/icon/message-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2></h2>
-                                                <div class="contact-info"></div>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-right h2'); ?>
+                                                <div class="contact-info cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-right .contact-info'); ?>
                                                 <div class="social-media-btns inline-social-media-btns">
                                                     <a target="_blank" href="https://www.facebook.com/NSINursingSolutions" class="fa fa-facebook"></a>
                                                     <a target="_blank" href="https://www.linkedin.com/company/nsi-nursing-solutions-inc" class="fa fa-linkedin"></a>

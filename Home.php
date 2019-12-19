@@ -6,6 +6,9 @@
             echo "<script type='text/javascript'>alert('CMS Active!');</script>";
         }
         else{
+            if(isMobile()){
+                echo "<script type='text/javascript'>alert('CMS not available on mobile devices.');</script>";
+            }
             $_SESSION['CMSActive'] = "";
         }
     }
@@ -64,7 +67,7 @@
                                         <p class="cms-item"></p>
                                         <?php echo create_cms_input($jsonFileName, '.slide1-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -78,7 +81,7 @@
                                         <?php echo create_cms_input($jsonFileName, '.slide2-overlay p'); ?>
                                         <a href="/Job-Seekers/Job-Openings.php">Job Openings</a>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -92,7 +95,7 @@
                                         <?php echo create_cms_input($jsonFileName, '.slide3-overlay p'); ?>
                                         <a href="/Services/Sales-Presentation.php">Learn More</a>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -105,7 +108,7 @@
                                         <p class="cms-item"></p>
                                         <?php echo create_cms_input($jsonFileName, '.slide4-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -118,7 +121,7 @@
                                         <p class="cms-item"></p>
                                         <?php echo create_cms_input($jsonFileName, '.slide5-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                     </ul>
