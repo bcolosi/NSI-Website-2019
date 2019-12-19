@@ -1,0 +1,16 @@
+[
+    [
+        {
+            "element": ".contact-col1",
+            "text": "<h2>Corporate Office</h2><p>2055 East State St.</p><p>East Petersburg, PA 17520</p><p>Hours: Mon - Fri, 8am to 5pm (EST)</p><p>Office: <a class='phone-num' href='tel:7175603863'>(717) 560-3863</a></p>"
+        },
+        {
+            "element": ".contact-col2",
+            "text": "<h2>Sales/Business Office</h2><h4>Michael Colosi</h4><p>EVP, Strategy and Business Development</p><p><a class='phone-num' href='tel:7175603863'>(717) 560-3863 x103</a></p><p><a href='mailto:macolosi@nsinursingsolutions.com?subject=NSI%20Inquiry'>macolosi@nsinursingsolutions.com</a></p>"
+        },
+        {
+            "element": ".contact-col3",
+            "text": "<h2>Job Seekers</h2><p><a class='phone-num' href='tel:8662668748'>(866) BONUS 4U</a> or <a class='phone-num' href='tel:8662668748'>(866) 266-8748</a></p><p><a href='mailto:rnrecruiter@nsinursingsolutions.com?subject=NSI%20Nursing%20Opportunities'>rnrecruiter@nsinursingsolutions.com</a></p>"
+        }
+    ]
+]

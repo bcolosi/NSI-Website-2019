@@ -43,7 +43,7 @@
     $fileArrayLength = count($fileArray);
 
     for($i = 0; $i < $fileArrayLength; $i++){
-        if(!isset($fileArray[$i]){
+        if(!isset($fileArray[$i])){
             $log = date("F j, Y, g:i a").": No file was uploade, therefore it will be ignored. ".PHP_EOL;
         }
         else if($fileArray[$i]["error"] == UPLOAD_ERR_OK){

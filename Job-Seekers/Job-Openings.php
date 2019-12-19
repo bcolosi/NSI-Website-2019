@@ -1,6 +1,7 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php"); ?>
 <!DOCTYPE html>
 <html>
-    <?php include("../includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html") ?>
     <head>
         <title>Job Opportunities Through NSI Nursing Solution Inc. - NSI Nursing Solutions Inc.</title>
         <meta name="description" content="Search for national Registered Nurse jobs. NSI is seeking experienced RNs to work on a full time basis. We offer exciting career opportunities, generous sign-on incentives, relocation assistance, and referral bonuses.">
@@ -9,6 +10,9 @@
         <script type="text/javascript">
             var masterSortInfo = new tblSortDir();
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Openings.json');
+                
                 // Map handlers
                 $('#job-map').stateMapHandler();
 
@@ -24,7 +28,14 @@
     </head>
     <body>
         <div id="page">
-            <?php include("../includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '/Openings.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div class="modal">
                     <div class="modal-content">
@@ -251,26 +262,14 @@
                                             <div class="job-map-side-info">
                                                 <div class="vertically-center">
                                                     <div class="content-header">
-                                                        <h1 class="content-header">Job Openings</h1>
+                                                        <h1 class="content-header cms-item"></h1>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info h1'); ?>
                                                     </div>
                                                     <div class="content-text">
-                                                        <p>
-                                                            Our clients are located all across the country 
-                                                            and each have their own unique opportunities. 
-                                                            Simply click on the state to review available 
-                                                            and upcoming positions. Then, call 
-                                                            <a class="phone-num" href="tel:8662668748">(866) BONUS 4U</a> 
-                                                            or 
-                                                            <a class="phone-num" href="tel:8662668748">(866) 266-8748</a> 
-                                                            or submit your contact 
-                                                            information and let NSI handle the rest.
-                                                        </p>
-                                                        <p>
-                                                            NSI is an Equal Opportunity Employer and does 
-                                                            not discriminate regardless of race, color, religion, 
-                                                            gender, age, sexual orientation, ancestry, disability,  
-                                                            veteran status or any other protected status. 
-                                                        </p>
+                                                        <p class="job-map-side-info-txt cms-item"></p>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info .job-map-side-info-txt'); ?>
+                                                        <p class="eeo-statement cms-item"></p>
+                                                        <?php echo create_cms_input($jsonFileName, '#region-one .job-map-side-info .eeo-statement'); ?>
                                                     </div>
                                                     <div class="btn-container">
                                                         <div class="link-btn col-sm-6">
@@ -304,25 +303,10 @@
                                                 <img src="/includes/images/icon/people-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2>The NSI Difference</h2>
-                                                <div class="content-text">
-                                                    <p>
-                                                        At NSI, we recognize the critical role you play. That is why 
-                                                        we take an executive approach when it comes to recruitment. 
-                                                        With NSI, you will enjoy a personal recruiter, industry 
-                                                        leading incentives, immediate interview feedback, 
-                                                        relocation assistance and much, much more. 
-                                                    </p>
-                                                    <br>
-                                                    <p>
-                                                        Since 2000, NSI has worked with hospitals that meet our 
-                                                        high standards for nursing practice and nurse culture. 
-                                                        We recognize that it is important to have a healthy 
-                                                        work/life balance and we ensure that all of our clients 
-                                                        take that philosophy to heart. Like thousands of your 
-                                                        colleagues, call us and experience the NSI difference!
-                                                    </p>
-                                                </div>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-left h2'); ?>
+                                                <div class="content-text cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-left .content-text'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -332,24 +316,10 @@
                                                 <img src="/includes/images/icon/money-bag-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2>Referral Bonus</h2>
-                                                <h2>$500</h2>
-                                                <div class="content-text">
-                                                    <p>It's as easy as 1, 2, 3!</p>
-                                                    <div class="bottom-list-container">
-                                                        <ul>
-                                                            <li>Tell other RNs about NSI Nursing Solutions, Inc. </li>
-                                                            <li>Share your address and telephone number with the RN.</li>
-                                                            <li>Ask your referral to call NSI and provide your contact information.</li>
-                                                        <ul>
-                                                    </div>
-                                                    <p>
-                                                        You can refer as many RNs as you like. The more you refer, 
-                                                        the greater your incentive. Once the RN completes 1 
-                                                        year of  employment with the hospital, a check in the 
-                                                        amount of $500 will be mailed to you.
-                                                    </p>
-                                                </div>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-mid h2'); ?>
+                                                <div class="content-text cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-mid .content-text'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -359,24 +329,10 @@
                                                 <img src="/includes/images/icon/message-icon.svg">
                                             </div>
                                             <div class="bottom-col-text">
-                                                <h2>Contact Us</h2>
-                                                <p><strong>Office Hours:</strong> Mon - Fri, 8am to 5pm (EST)</p>
-                                                <p>
-                                                    <strong>Main #:</strong> 
-                                                    <a class="phone-num" href="tel:7175603863">(717) 560-3863</a>
-                                                </p>
-                                                <p>
-                                                    <strong>Toll Free #:</strong> 
-                                                    <a class="phone-num" href="tel:8662668748">(866) BONUS 4U </a>
-                                                    or 
-                                                    <a class="phone-num" href="tel:8662668748">(866) 266-8748</a>
-                                                </p>
-                                                <p>
-                                                    <strong>Email:</strong>
-                                                    <a href="mailto:rnrecruiter@nsinursingsolutions.com?subject=NSI%20Nursing%20Opportunities">
-                                                        rnrecruiter@nsinursingsolutions.com
-                                                    </a>
-                                                </p>
+                                                <h2 class="cms-item"></h2>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-right h2'); ?>
+                                                <div class="contact-info cms-item"></div>
+                                                <?php echo create_cms_input($jsonFileName, '#region-three .bottom-col-right .contact-info'); ?>
                                                 <div class="social-media-btns inline-social-media-btns">
                                                     <a target="_blank" href="https://www.facebook.com/NSINursingSolutions" class="fa fa-facebook"></a>
                                                     <a target="_blank" href="https://www.linkedin.com/company/nsi-nursing-solutions-inc" class="fa fa-linkedin"></a>
@@ -390,7 +346,7 @@
                     </div>
                 </div>
             </div>
-            <?php include("../includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>

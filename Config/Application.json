@@ -1,0 +1,68 @@
+[
+    [
+        {
+            "element": "#region-one #content-head h1",
+            "text": "NSI Employment Process"
+        },
+        {
+            "element": "#region-one .process-step1 .process-header",
+            "text": "Step 1"
+        },
+        {
+            "element": "#region-one .process-step1 .process-list-li1",
+            "text": "Complete the form below or call <a class='phone-num' href='tel:8662668748'>(866) BONUS 4U</a> or <a class='phone-num' href='tel:8662668748'>(866) 266-8748</a>."
+        },
+        {
+            "element": "#region-one .process-step1 .process-list-li2",
+            "text": "Discuss NSI opportunities and incentives."
+        },
+        {
+            "element": "#region-one .process-step1 .process-list-li3",
+            "text": "Schedule a telephonic interview with NSI."
+        },
+        {
+            "element": "#region-one .process-step2 .process-header",
+            "text": "Step 2"
+        },
+        {
+            "element": "#region-one .process-step2 .process-list-li1",
+            "text": "Complete screening interview with a NSI Project Manager."
+        },
+        {
+            "element": "#region-one .process-step2 .process-list-li2",
+            "text": "Review unit specific information, salary, benefits, incentives and relocation."
+        },
+        {
+            "element": "#region-one .process-step2 .process-list-li3",
+            "text": "Schedule interview at hospital."
+        },
+        {
+            "element": "#region-one .process-step3 .process-header",
+            "text": "Step 3"
+        },
+        {
+            "element": "#region-one .process-step3 .process-list-li1",
+            "text": "NSI will arrange all travel accommodations."
+        },
+        {
+            "element": "#region-one .process-step3 .process-list-li2",
+            "text": "Interview with manager and tour facility."
+        },
+        {
+            "element": "#region-one .process-step3 .process-list-li3",
+            "text": "All job offers will come through NSI."
+        },
+        {
+            "element": "#region-two #content-head h1",
+            "text": "Let NSI find the right position for you."
+        },
+        {
+            "element": "#region-two .application-header",
+            "text": "NSI Contact Form"
+        },
+        {
+            "element": "#region-three .eeo-statement",
+            "text": "*NSI is an equal opportunity employer. All candidates will receive consideration for employment regardless of race, color, religion, gender, age, sexual orientation, ancestry, disability, veteran status or any other protected status."
+        }
+    ]
+]

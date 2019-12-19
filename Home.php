@@ -1,6 +1,22 @@
+<?php
+    include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php");
+    if(isset($_POST['CMSkey'])){
+        if(check_key($_POST['CMSkey'])){
+            $_SESSION['CMSActive'] = $_POST['CMSkey'];
+            echo "<script type='text/javascript'>alert('CMS Active!');</script>";
+        }
+        else{
+            if(isMobile()){
+                echo "<script type='text/javascript'>alert('CMS not available on mobile devices.');</script>";
+            }
+            $_SESSION['CMSActive'] = "";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
-    <?php include("includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html"); ?>
     <head>
         <title>Welcome to NSI Nursing Solutions Inc.</title>
         <meta name="description" content="NSI Nursing Solutions inc. is the national leader in high volume recruitment of American experienced Registered Nurses. Our focus is on the permanent placement of staff RNs and provide retention consulting to further protect your investment.  Contact NSI to solve your staffing shortage or learn about full time nursing opportunities/RN jobs.">
@@ -10,20 +26,34 @@
         <script src="/includes/js/jquery.flexslider.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Home.json');
+
+                // Initializes flexslider
                 $('.flexslider').flexslider({
                     animation: "slide",
                     slideshow: true,
                     slideshowSpeed: 10000,
                     pauseOnHover: false
                 });
+
                 $('.slides img').css({height: '', width: ''});
-                $('#region-one').homeRegOneContentBoxHandler({});
+                setTimeout(function(){
+                    $('#region-one').homeRegOneContentBoxHandler({});
+                }, 1000);
             });
         </script>
     </head>
     <body>
         <div id="page">
-            <?php include("includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '\Home.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div id="slidebox" class="flexslider hidden-xs">
                     <ul class="slides">
@@ -32,15 +62,12 @@
                             <div class="slide-overlay slide1-overlay vertically-center">
                                 <div class="slide-overlay-text-container">
                                     <div class="slide-overlay-text">
-                                        <h2>Recruitment. Retention. Results.</h2>
-                                        <p>
-                                            Since 2000, NSI has helped hospitals and health care 
-                                            systems hire high volumes of experienced nurses who match 
-                                            the skills and culture of each client. Our national reach 
-                                            enables us to quickly fill your staff vacancies.  
-                                        </p>
+                                        <h2 class="cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '.slide1-overlay h2'); ?>
+                                        <p class="cms-item"></p>
+                                        <?php echo create_cms_input($jsonFileName, '.slide1-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -48,15 +75,13 @@
                             <div class="slide-overlay slide2-overlay vertically-center">
                                 <div class="slide-overlay-text-container">
                                     <div class="slide-overlay-text">
-                                        <h2>Looking for a job?</h2>
-                                        <p>
-                                            We are always seeking great nurses to connect with our clients. 
-                                            Put our experienced team of recruiters to work for you and let us 
-                                            find your next job. Click below to see available positions.
-                                        </p>
+                                        <h2 class="cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '.slide2-overlay h2'); ?>
+                                        <p class="cms-item"></p>
+                                        <?php echo create_cms_input($jsonFileName, '.slide2-overlay p'); ?>
                                         <a href="/Job-Seekers/Job-Openings.php">Job Openings</a>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -64,16 +89,13 @@
                             <div class="slide-overlay slide3-overlay vertically-center">
                                 <div class="slide-overlay-text-container">
                                     <div class="slide-overlay-text">
-                                        <h2>Need to Open Beds?</h2>
-                                        <p>
-                                            Whether you need to hire 20 or 200 experienced RNs, our 
-                                            proven recruitment model has enabled our clients to quickly 
-                                            open new units, towers and hospitals. Click below to learn 
-                                            how NSI can help.   
-                                        </p>
+                                        <h2 class="cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '.slide3-overlay h2'); ?>
+                                        <p class="cms-item"></p>
+                                        <?php echo create_cms_input($jsonFileName, '.slide3-overlay p'); ?>
                                         <a href="/Services/Sales-Presentation.php">Learn More</a>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -81,17 +103,12 @@
                             <div class="slide-overlay slide4-overlay vertically-center">
                                 <div class="slide-overlay-text-container">
                                     <div class="slide-overlay-text">
-                                        <h2>About Us</h2>
-                                        <p>
-                                            NSI is a national, high-volume registered nurse 
-                                            recruitment firm. We only hire U.S. experienced 
-                                            nurses as your employees. Since 2000, our clients have 
-                                            hired thousands of RNs.  What sets NSI apart is our 
-                                            high attraction rate, quick time-to-fill, industry 
-                                            leading guarantee, and <u>RESULTS</u>.
-                                        </p>
+                                        <h2 class="cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '.slide4-overlay h2'); ?>
+                                        <p class="cms-item"></p>
+                                        <?php echo create_cms_input($jsonFileName, '.slide4-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -99,18 +116,12 @@
                             <div class="slide-overlay slide5-overlay vertically-center">
                                 <div class="slide-overlay-text-container">
                                     <div class="slide-overlay-text">
-                                        <h2>Why Nurses Choose NSI?</h2>
-                                        <p>
-                                            We recognize the critical role you play in health care. That 
-                                            is why we take an executive approach when it comes to 
-                                            recruitment. Working with your personal recruiter,
-                                            you will enjoy industry leading incentives, immediate 
-                                            interview feedback, relocation assistance, and much, 
-                                            much more. Like thousands of your colleagues, let NSI 
-                                            introduce you to your next employer.
-                                        </p>
+                                        <h2 class="cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '.slide5-overlay h2'); ?>
+                                        <p class="cms-item"></p>
+                                        <?php echo create_cms_input($jsonFileName, '.slide5-overlay p'); ?>
                                     </div>
-                                <div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -120,46 +131,42 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>NURSE RECRUITMENT SERVICES</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-one #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="content-box-container">
                                         <div class="content-box">
                                             <div class="content-list hospital-content-list col-md-6">
                                                 <div class="services-header">
-                                                    <h2>For Hospitals</h2>
+                                                    <h2 class="cms-item"></h2>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .services-header h2'); ?>
                                                 </div>
                                                 <div class="content-list-container">
                                                     <ul>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Industry Leader in High Volume Nurse Recruitment
-                                                            </p>
+                                                        <li class="content-list-li1">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li1 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Rapid Time - to - Fill
-                                                            </p>
+                                                        <li class="content-list-li2">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li2 p'); ?>
                                                         </li>
-                                                        <li class="content-list-last">
-                                                            <p class="content-list-text">
-                                                                Risk-Free Fee Structure
-                                                            </p>
+                                                        <li class="content-list-last content-list-li3">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li3 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                            Permanent Placement of Experienced RNs
-                                                            </p>
+                                                        <li class="content-list-li4">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li4 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Retention & Talent Engagement 
-                                                            </p>
+                                                        <li class="content-list-li5">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li5 p'); ?>
                                                         </li>
-                                                        <li class="content-list-last">
-                                                            <p class="content-list-text">
-                                                                Best Guarantee
-                                                            </p>
+                                                        <li class="content-list-last content-list-li6">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .hospital-content-list .content-list-li6 p'); ?>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -185,39 +192,34 @@
                                             </div>
                                             <div class="content-list nurse-content-list col-md-6">
                                                 <div class="services-header">
-                                                    <h2>For Nurses</h2>
+                                                    <h2 class="cms-item"></h2>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .services-header h2'); ?>
                                                 </div>
                                                 <div class="content-list-container">
                                                     <ul>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                National Opportunities
-                                                            </p>
+                                                        <li class="content-list-li1">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li1 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Generous Incentives
-                                                            </p>
+                                                        <li class="content-list-li2">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li2 p'); ?>
                                                         </li>
-                                                        <li class="content-list-last">
-                                                            <p class="content-list-text">
-                                                                Relocation Support
-                                                            </p>
+                                                        <li class="content-list-last content-list-li3">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li3 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Full Time Staff RN Jobs
-                                                            </p>
+                                                        <li class="content-list-li4">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li4 p'); ?>
                                                         </li>
-                                                        <li>
-                                                            <p class="content-list-text">
-                                                                Personal Recruiter
-                                                            </p>
+                                                        <li class="content-list-li5">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li5 p'); ?>
                                                         </li>
-                                                        <li class="content-list-last">
-                                                            <p class="content-list-text">
-                                                                Free Service
-                                                            </p>
+                                                        <li class="content-list-last content-list-li6">
+                                                            <p class="content-list-text cms-item"></p>
+                                                            <?php echo create_cms_input($jsonFileName, '#region-one .nurse-content-list .content-list-li6 p'); ?>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -237,21 +239,20 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>INDUSTRY LEADER IN HIGH VOLUME RN RECRUITMENT</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-two #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="content-box-container col-xs-12 col-sm-6 col-md-4">
-                                        <div class="content-box">
+                                        <div class="content-box content-box1">
                                             <div class="content-box-img">
                                                 <img src="includes/images/box-1.jpg">
                                             </div>
                                             <div class="content-box-text">
-                                                <h4>Need Staff Nurses Quickly?</h4>
-                                                <p>
-                                                    When you need to hire many RNs, NSI can help. As the 
-                                                    leader in high volume recruitment, we have the 
-                                                    experience and the national reach to meet your needs quickly.
-                                                </p>
+                                                <h4 class="cms-item"></h4>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box1 .content-box-text h4'); ?>
+                                                <p class="cms-item"></p>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box1 .content-box-text p'); ?>
                                             </div>
                                             <div class="link-btn">
                                                 <a href="/Services/Sales-Presentation.php">Learn More</a>
@@ -260,17 +261,15 @@
                                         <br>
                                     </div>
                                     <div class="content-box-container col-xs-12 col-sm-6 col-md-4">
-                                        <div class="content-box">
+                                        <div class="content-box content-box2">
                                             <div class="content-box-img">
                                                 <img src="includes/images/nurses-walking.jpg">
                                             </div>
                                             <div class="content-box-text">
-                                                <h4>Travel Nurses Costing Too Much?</h4>
-                                                <p>
-                                                    At NSI, we recruit experienced nurses as your employees.  
-                                                    Click below to see how much Travel RNs are costing in excess 
-                                                    labor utilization.
-                                                </p>
+                                                <h4 class="cms-item"></h4>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box2 .content-box-text h4'); ?>
+                                                <p class="cms-item"></p>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box2 .content-box-text p'); ?>
                                             </div>
                                             <div class="link-btn">
                                                 <a href="/Services/Savings-Calculator.php">Calculator</a>
@@ -280,16 +279,15 @@
                                     </div>
                                     <div class="hidden-xs hidden-md hidden-lg col-sm-3"></div>
                                     <div class="content-box-container col-xs-12 col-sm-6 col-md-4">
-                                        <div class="content-box">
+                                        <div class="content-box content-box3">
                                             <div class="content-box-img">
                                                 <img src="includes/images/nurse-group.jpg">
                                             </div>
                                             <div class="content-box-text">
-                                                <h4>Ready For A New Job?</h4>
-                                                <p>
-                                                    Our clients are looking for you. Click below to learn how 
-                                                    NSI can help you and to search our national opportunities.
-                                                </p>
+                                                <h4 class="cms-item"></h4>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box3 .content-box-text h4'); ?>
+                                                <p class="cms-item"></p>
+                                                <?php echo create_cms_input($jsonFileName, '#region-two .content-box3 .content-box-text p'); ?>
                                             </div>
                                             <div class="link-btn">
                                                 <a href="/Job-Seekers/Job-Openings.php">Get Started</a>
@@ -308,49 +306,24 @@
                         <div class="row">
                             <div id="content" class="col-md-6">
                                 <div id="content-head">
-                                    <h1>A MESSAGE FROM OUR FOUNDER</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
-                                    <div class="content-text justify-text">
-                                        <p>
-                                            After 30 years as a senior healthcare executive and 
-                                            understanding the issues confronting the industry, 
-                                            NSI Nursing Solutions was created. My vision was to 
-                                            ensure quality patient care during a catastrophic nursing shortage, 
-                                            which continues today. Since 2000, NSI has been helping hospitals, 
-                                            all across the country, maintain appropriate RN staffing levels.
-                                        </p>
-                                        <p>
-                                            Our mission is to promote a quality centric firm that recognizes 
-                                            the RN as a major hospital and patient partner. Our vision is
-                                            to blend qualified and culturally competent RNs with the 
-                                            management style of each hospital.  We believe this will reduce 
-                                            RN burnout and maximize retention.
-                                        </p>
-                                        <p>
-                                            At NSI, we are proud of our client successes and look forward 
-                                            to helping connect great nurses with great hospitals.
-                                        </p>
-                                        <p>
-                                            Sincerely,
-                                            <br>
-                                            Marc Colosi, CEO and Chairman
-                                        </p>
-                                    </div>
+                                    <div class="content-text justify-text cms-item"></div>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three #content-body .content-text'); ?>
                                 </div>
                             </div>
                             <div id="content-img" class="col-md-6 who-we-are-img">
                                 <img src="includes/images/generations.jpg">
-                                <div class="pic-caption">
-                                    From left: Brian Colosi, President; Marc Colosi, CEO and Chairman; 
-                                    Michael Colosi, EVP, Strategy and Business Development.
-                                </div>
+                                <div class="pic-caption cms-item"></div>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three .pic-caption'); ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php include("includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>

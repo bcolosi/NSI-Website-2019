@@ -1,6 +1,7 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php"); ?>
 <!DOCTYPE html>
 <html>
-    <?php include("../includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html") ?>
     <head>
         <title>Apply Now - NSI Nursing Solutions Inc.</title>
         <meta name="description" content="Apply now and let our experienced team of recruiters find your next job.">
@@ -8,6 +9,9 @@
         <script src="/includes/js/jquery.csv.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Application.json');
+                
                 $('#content-bkgrd-quotes').quoteHandler({});
                 $('.input-phone-num').change(function(){ $(this).val(formatPhoneNum($(this).val())); });
                 $('#contact-form').submit(function(){
@@ -18,31 +22,34 @@
     </head>
     <body>
         <div id="page">
-            <?php include("../includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '/Application.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div id="region-one" class="process-bkgd">
                     <div class="container">
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>NSI Employment Process</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-one #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
-                                    <div class="process-step col-md-3">
-                                        <h2 class="process-header">Step 1</h2>
+                                    <div class="process-step process-step1 col-md-3">
+                                        <h2 class="process-header cms-item"></h2>
+                                        <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-header'); ?>
                                         <ol class="nsi-process-list">
-                                            <li>
-                                                Complete the form below or call 
-                                                <a class="phone-num" href="tel:8662668748">(866) BONUS 4U</a> 
-                                                or 
-                                                <a class="phone-num" href="tel:8662668748">(866) 266-8748</a>.
-                                            </li>
-                                            <li>
-                                                Discuss NSI opportunities and incentives.
-                                            </li>
-                                            <li>
-                                                Schedule a telephonic interview with NSI.
-                                            </li>
+                                            <li class="process-list-li1 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li1'); ?>
+                                            <li class="process-list-li2 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li2'); ?>
+                                            <li class="process-list-li3 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step1 .process-list-li3'); ?>
                                         </ol>
                                     </div>
                                     <div class="col-md-6">
@@ -53,21 +60,18 @@
                                                     <div class="next-arrow-head"></div>
                                                 </div>
                                             </td>
-                                            <td class="process-step process-info">
+                                            <td class="process-step process-step2 process-info">
                                                 <div class="process-header-container">
-                                                    <h2 class="process-header">Step 2</h2>
+                                                    <h2 class="process-header cms-item"></h2>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-header'); ?>
                                                 </div>
                                                 <ol class="nsi-process-list">
-                                                    <li>
-                                                        Complete screening interview with a NSI Project Manager.
-                                                    </li>
-                                                    <li>
-                                                        Review unit specific information, salary, benefits, 
-                                                        incentives and relocation.
-                                                    </li>
-                                                    <li>
-                                                        Schedule interview at hospital.
-                                                    </li>
+                                                    <li class="process-list-li1 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li1'); ?>
+                                                    <li class="process-list-li2 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li2'); ?>
+                                                    <li class="process-list-li3 cms-item"></li>
+                                                    <?php echo create_cms_input($jsonFileName, '#region-one .process-step2 .process-list-li3'); ?>
                                                 </ol>
                                             </td>
                                             <td class="arrow-container hidden-xs hidden-sm">
@@ -78,18 +82,18 @@
                                             </td>
                                         </table>
                                     </div>
-                                    <div class="process-step col-md-3">
+                                    <div class="process-step process-step3 col-md-3">
                                         <div class="process-header-container">
-                                            <h2 class="process-header">Step 3</h2>
+                                            <h2 class="process-header cms-item"></h2>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-header'); ?>
                                         </div>
                                         <ol class="nsi-process-list">
-                                            <li>
-                                                NSI will arrange all travel accommodations.
-                                            </li>
-                                            <li>
-                                                Interview with manager and tour facility.
-                                            </li>
-                                            <li>All job offers will come through NSI.</li>
+                                            <li class="process-list-li1 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li1'); ?>
+                                            <li class="process-list-li2 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li2'); ?>
+                                            <li class="process-list-li3 cms-item"></li>
+                                            <?php echo create_cms_input($jsonFileName, '#region-one .process-step3 .process-list-li3'); ?>
                                         </ol>
                                     </div>
                                 </div>
@@ -102,7 +106,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>Let NSI find the right position for you.</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-two #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div id="content-bkgrd-quotes" class="">
@@ -111,9 +116,10 @@
                                     </div>
                                     <div class="content-box app-content-box">
                                         <div class="center-text content-text">
-                                            <h2 class="application-header">NSI Contact Form</h2>
+                                            <h2 class="application-header cms-item"></h2>
+                                            <?php echo create_cms_input($jsonFileName, '#region-two .application-header'); ?>
                                         </div>
-                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST" enctype="multipart/form-data">
+                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST">
                                             <table class="form-table">
                                                 <tbody>
                                                     <tr class="required-input">
@@ -289,21 +295,15 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-body">
-                                    <div class="content-text center-text eeo-statement">
-                                        *NSI is an equal opportunity employer. All 
-                                        candidates will receive consideration for 
-                                        employment regardless of race, color, religion, 
-                                        gender, age, sexual orientation, ancestry, 
-                                        disability, veteran status or any other protected 
-                                        status.
-                                    </div>
+                                    <div class="content-text center-text eeo-statement cms-item"></div>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three .eeo-statement'); ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php include("../includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>

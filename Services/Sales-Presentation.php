@@ -1,6 +1,7 @@
+<?php include($_SERVER['DOCUMENT_ROOT']."/includes/admin_functions.php"); ?>
 <!DOCTYPE html>
 <html>
-    <?php include("../includes/includes.html") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/includes/includes.html") ?>
     <head>
         <title>Sales Presentation - NSI Nursing Solutions Inc.</title>
         <meta name="description" content="The nursing shortage is challenging all health care organizations. Review our sales presentation to learn how NSI can help you replace costly travel RNs with experienced nurses as your employees.">
@@ -8,29 +9,31 @@
         <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+                // Loads the text for the page
+                $('body').loadPageText('/Config/Presentation.json');
+                
                 $('#pwr-pt-pres').loadPresentation();
             });
         </script>
     </head>
     <body>
         <div id="page">
-            <?php include("../includes/header.html"); ?>
+            <?php
+                include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
+                if(check_key($_SESSION['CMSActive'])){
+                    $jsonFileName = '/Presentation.json';
+                    include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
+                    echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
+                }
+            ?>
             <div id="main-content">
                 <div id="banner-img">
                     <img src="/includes/images/banner/business-meeting.jpg">
                     <div class="overlay">
-                        <h2>About Us</h2>
-                        <p>
-                            The nursing shortage continues to challenge all health care 
-                            organizations to hire experienced nurses. Since 2000, hospitals 
-                            have partnered with NSI to quickly solve their staffing shortage. 
-                            Whether you need to hire 20 or 200 experienced RNs, NSI has the 
-                            national reach and experience to meet your recruitment goals. 
-                        </p>
-                        <p>
-                            Enjoy the presentation below to learn about NSI and 
-                            begin your path to full staffing.
-                        </p>
+                        <h2 class="cms-item"></h2>
+                        <?php echo create_cms_input($jsonFileName, '#banner-img .overlay h2'); ?>
+                        <div class="overlay-txt cms-item"></div>
+                        <?php echo create_cms_input($jsonFileName, '#banner-img .overlay .overlay-txt'); ?>
                     </div>
                 </div>
                 <div id="region-three" class="pwr-pt-bkgrd">
@@ -38,7 +41,8 @@
                         <div class="row">
                             <div id="content">
                                 <div id="content-head">
-                                    <h1>Sales Presentation</h1>
+                                    <h1 class="cms-item"></h1>
+                                    <?php echo create_cms_input($jsonFileName, '#region-three #content-head h1'); ?>
                                 </div>
                                 <div id="content-body">
                                     <div class="pwr-pt-wrapper">
@@ -69,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <?php include("../includes/footer.html"); ?>
+            <?php include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html"); ?>
         </div>
     </body>
 </html>
