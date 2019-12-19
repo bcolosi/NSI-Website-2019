@@ -55,20 +55,20 @@
     color: #1d5da7;
 }
 
-.savings-box-info-paragraph {
+.savings-box-info-txt-container p {
     margin: 0;
 }
 
-.savings-box-info-list {
+.savings-box-info-txt-container ul {
     margin: 10px 40px;
     width: 270px;
 }
 
-.savings-box-info-list li {
+.savings-box-info-txt-container ul li {
     padding: 5px 0;
 }
 
-.savings-box-info-list li {
+.savings-box-info-txt-container ul li {
     list-style-position: inside;
 }
 
@@ -189,7 +189,7 @@ input {
         font-size: 34px;
     }
     
-    .savings-box-info-list {
+    .savings-box-info-txt-container ul {
         margin: 10px 15px;
     }
     
@@ -242,7 +242,7 @@ input {
         font-size: 38px;
     }
     
-    .savings-box-info-list {
+    .savings-box-info-txt-container ul {
         margin: 10px 15px;
     }
     

@@ -76,7 +76,7 @@ function isEmptyArray(array){
             return false;
         }
     }
-    
+
     return true;
 }
 
@@ -118,7 +118,7 @@ function isEmptyArray(array){
     $.fn.openModal = function(){
         $(this).click(function(evt){
             evt.preventDefault();
-            $('head').append('<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script>');
+            $('head').append('<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>');
             $('.modal').show();
             $('body').lockScrollBar();
             sync_col_width('table-list', 'table-list-header');
@@ -130,6 +130,15 @@ function isEmptyArray(array){
         $(this).click(function(){
             $('.modal').hide();
             $('body').unlockScrollBar();
+        });
+    }
+
+    $.fn.loadPageText = function(txtFilePath){
+        $.getJSON(txtFilePath, function(data){
+            data = data[0];
+            for(var i = 0; i < data.length; i++){
+                $(data[i].element).html(data[i].text);
+            }
         });
     }
 
@@ -220,17 +229,13 @@ function isEmptyArray(array){
             type: "GET",
             url: csv_path,
             dataType: "text",
-            success: function(data, unused, req){
+            success: function(data, status, req){
                 // Get data from csv file and put it in the table
                 var csv_data = $.csv.toArrays(data);
                 var tableBody = '';
                 var stateColNum = -1;
                 var incentiveColNum = -1;
                 var unitColNum = -1;
-                var lastMod = new Date(req.getResponseHeader("Last-Modified"));
-                lastMod = (lastMod.getMonth() + 1) + '/' + lastMod.getDate() + '/' + lastMod.getFullYear();
-
-                //$('.last-updated').html('Last Updated: ' + lastMod);
 
                 for(var row = 0; row < csv_data.length; row++){
                     var tableRow = '<tr>';
@@ -293,7 +298,7 @@ function isEmptyArray(array){
                 }
                 $('#'+ bodyTableId +' tbody').append(tableBody);
                 setTimeout(function(){
-                    $('head').append('<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script>');
+                    $('head').append('<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>');
                 }, 250);
             }
         });
