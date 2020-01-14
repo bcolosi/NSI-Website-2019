@@ -49,7 +49,7 @@
             <?php
                 include($_SERVER['DOCUMENT_ROOT']."/includes/header.html");
                 if(check_key($_SESSION['CMSActive'])){
-                    $jsonFileName = '\Home.json';
+                    $jsonFileName = '/Home.json';
                     include($_SERVER['DOCUMENT_ROOT']."/includes/cms_menu.html");
                     echo '<input type="hidden" form="cms-form" name="jsonName" value="'.$jsonFileName.'">';
                 }
@@ -317,7 +317,7 @@
                             <div id="content-img" class="col-md-6 who-we-are-img">
                                 <img src="includes/images/generations.jpg">
                                 <div class="pic-caption cms-item"></div>
-                                    <?php echo create_cms_input($jsonFileName, '#region-three .pic-caption'); ?>
+                                <?php echo create_cms_input($jsonFileName, '#region-three .pic-caption'); ?>
                             </div>
                         </div>
                     </div>
