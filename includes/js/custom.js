@@ -11,6 +11,20 @@
 
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+// Check if user is on IE and give them a warning.
+window.onload = function (){
+	if (localStorage.getItem("hasCodeRunBefore") === null) {
+        var ua = window.navigator.userAgent;
+		var msie = ua.indexOf('MSIE ');			// IE v10 or below
+		var trident = ua.indexOf('Trident/');	// IE 11
+		if(msie > 0 || trident > 0){
+			alert("We have detected that you are using Internet Explorer. For the best results, use the Chrome, Firefox, or Edge browser.");
+		}
+
+        localStorage.setItem("hasCodeRunBefore", true);
+    }
+}
+
 // Get parameters from url
 function getUrlParams(){
     var params = {};
