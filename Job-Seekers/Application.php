@@ -119,7 +119,7 @@
                                             <h2 class="application-header cms-item"></h2>
                                             <?php echo create_cms_input($jsonFileName, '#region-two .application-header'); ?>
                                         </div>
-                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST">
+                                        <form id="contact-form" action="http://nsiats.azurewebsites.net/insertPending.php" method="POST" enctype="multipart/form-data">
                                             <table class="form-table">
                                                 <tbody>
                                                     <tr class="required-input">
