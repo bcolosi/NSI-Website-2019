@@ -2,6 +2,9 @@
     // Turn off error reporting
     error_reporting(E_ERROR | E_WARNING | E_PARSE);
     session_start();
+	header('Cache-Control: no-cache, no-store, must-revalidate');
+	header('Pragma: no-cache');
+	header('Expires: 0');
 
     // Check to see if user is on mobile browser
     function isMobile(){
@@ -52,7 +55,12 @@
     }
 
     function get_json_path($jsonFileName){
-        return $_SERVER['DOCUMENT_ROOT'] . '\Config' . $jsonFileName;
+		if($jsonFileName == '/Application.json' || $jsonFileName == '/faq.json' || $jsonFileName == '/Openings.json' || $jsonFileName == '/Presentation.json' || $jsonFileName == '/Savings.json'){
+			return $_SERVER['DOCUMENT_ROOT'].'/Config'.$jsonFileName;
+		}
+		else {
+			return getcwd().'/'.'Config'.$jsonFileName;
+		}
     }
 
     // Get contents of json file
@@ -71,8 +79,8 @@
     function create_cms_input($jsonFileName, $elementPath){
         if(check_key(($_SESSION['CMSActive']))){
             $data = get_json($jsonFileName);
-            $data = $data[0];   // get most recent entry only in json file
-
+            $data = $data[0];   // get most recent entry in json file only
+			//if(!file_exists(get_json_path($jsonFileName))){echo get_json_path($jsonFileName).': File not found!';}
             // Autofill textareas
             $textareaAutofill = "";
             $arrayLength = count($data);
