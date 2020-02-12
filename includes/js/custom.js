@@ -453,7 +453,6 @@ function isEmptyArray(array){
                         }
                         tableRow += '</tr>';
                         if(stateColNum == -1){
-                            alert('ERROR: Unable to find state openings.');
                             return;
                         }
                         
